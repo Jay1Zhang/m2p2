@@ -9,7 +9,7 @@ META_FILE = './qps_index.csv'   # meta-data file
 
 # employed hyper-parameters & constants
 BATCH = 32
-#N_WORKERS = 4   # dataloader
+N_WORKERS = 4   # thread number of dataloader
 #MAX_DUR = 482   # we divided all speaking length by this max length to normalize
 
 #UPD_WEIGHT = 0.5 # update rate for modality weights

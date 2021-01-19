@@ -2,6 +2,8 @@
 # -*- coding:utf-8 -*-
 import argparse
 
+from dataset import gen_dataloader
+
 if __name__ == '__main__':
     # 0 - Configure arguments parser
     parser = argparse.ArgumentParser()
@@ -26,6 +28,7 @@ if __name__ == '__main__':
     #############
 
     # 1 - load dataset
+    tra_loader, val_loader, tes_loader = gen_dataloader(FOLD, MODS)
 
     # 2 - Initialize m2p2 models
     ## initialize multiple model to output the latent embeddings for a,v,l
