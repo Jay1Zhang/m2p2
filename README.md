@@ -39,5 +39,9 @@ for epoch = 1, ..., N do
 % Master Procedure End
 ```
 
+#### Bug Log
 
+- 如下
+    > RuntimeError: Tensor for 'out' is on CPU, Tensor for argument #1 'self' is on CPU, but expected them to be on GPU (while checking arguments for addmm)
+    - init model时要 .to(device) 一下
 

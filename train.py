@@ -21,8 +21,8 @@ def gen_het_emb(latent_emb_mod, weight_mod, MODS):
 
 
 def gen_meta_emb(sample):
-    dur_time = sample['dur'].float().to(device) / MAX_DUR
-    st_vote = (sample['ed_vote'] - sample['change']).float().to(device)
+    st_vote = (sample['ed_vote'] - sample['change']).float().unsqueeze(1).to(device)
+    dur_time = (sample['dur'] / MAX_DUR).float().unsqueeze(1).to(device)
     meta_emb = torch.cat([st_vote, dur_time], dim=1)
     return meta_emb
 

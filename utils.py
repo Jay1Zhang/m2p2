@@ -68,7 +68,7 @@ def saveModel(FOLD, model_dict, weight_mod):
 
 
 def loadModel(FOLD, model_dict):
-    dirs = f'./pre_trained_models/fold{FOLD}/'
+    dirs = f'./pre_trained_models/fold{FOLD}'
     for mod in model_dict.keys():
         filename = f'{dirs}/{mod}'
         if os.path.isfile(filename):

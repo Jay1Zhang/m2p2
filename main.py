@@ -32,7 +32,7 @@ if __name__ == '__main__':
 
     TEST_MODE = args.test_mode
     VERBOSE = args.verbose
-    TEST_MODE, VERBOSE = False, True
+    TEST_MODE, VERBOSE = True, True
 
     #############
 
@@ -41,17 +41,17 @@ if __name__ == '__main__':
 
     # 2 - Initialize m2p2 models
     # initialize multiple models to output the latent embeddings for a,v,l
-    latent_models = {mod: model.LatentModel(mod, N_FEATS, N_FEATS // 2, DP) for mod in MODS}
+    latent_models = {mod: model.LatentModel(mod, N_FEATS, N_FEATS, DP).to(device) for mod in MODS}
     # initialize the shared mlp model for alignment module
-    align_model = model.AlignModel(ninp=N_FEATS, nout=N_FEATS, dropout=DP)
+    align_model = model.AlignModel(ninp=N_FEATS, nout=N_FEATS, dropout=DP).to(device)
     # initialize the reference mlp model for heterogeneity module
     # Note: test_mode doesn't need reference model because it's used to update params: w_m
     if not TEST_MODE:
-        ref_model = model.HetModel(nfeat=N_FEATS, nhid=N_FEATS // 2, dropout=DP)
+        ref_model = model.HetModel(nfeat=N_FEATS, nhid=N_FEATS // 2, dropout=DP).to(device)
         ref_params = get_hyper_params({'ref': ref_model})
         ref_optim = optim.Adam(ref_params, lr=LR, weight_decay=W_DECAY)
     # initialize persuasiveness model to predict persuasiveness with H_align, H_het and X_meta
-    pers_model = model.PersModel(nmod=len(MODS), nfeat=N_FEATS, nhid=N_FEATS // 2, dropout=DP)
+    pers_model = model.PersModel(nmod=len(MODS), nfeat=N_FEATS, nhid=N_FEATS // 2, dropout=DP).to(device)
 
     # initialize m2p2 models and hyper-parameters and optimizer
     m2p2_models = latent_models

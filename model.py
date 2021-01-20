@@ -30,7 +30,6 @@ class InputEmb(nn.Module):
         x = self.bn(x)
         return F.relu(self.dropout(x))
 
-
 ############################## question here ##################################
 # positional encoder + transformer encoder
 class TransformerEmb(nn.Module):
