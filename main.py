@@ -1,15 +1,20 @@
 #!/usr/bin/env python 
 # -*- coding:utf-8 -*-
 import argparse
+import time
+from tqdm import tqdm
+from torch import optim
 
-import utils, model
+import model
+from utils import *
 from dataset import gen_dataloader
+from train import train_m2p2, eval_m2p2, train_ref, eval_ref
 
 if __name__ == '__main__':
     # 0 - Configure arguments parser
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--fd', required=False, default=0, type=int, help='fold id')
+    parser.add_argument('--fd', required=False, default=9, type=int, help='fold id')
     parser.add_argument('--mod', required=False, default='avl', type=str,
                         help='modalities: a,v,l, or any combination of them')
     parser.add_argument('--dp', required=False, default=0.4, type=float, help='dropout')
@@ -27,6 +32,7 @@ if __name__ == '__main__':
 
     TEST_MODE = args.test_mode
     VERBOSE = args.verbose
+    TEST_MODE, VERBOSE = False, True
 
     #############
 
@@ -35,26 +41,65 @@ if __name__ == '__main__':
 
     # 2 - Initialize m2p2 models
     # initialize multiple models to output the latent embeddings for a,v,l
-    latent_models = {mod: model.LatentEmb(mod, utils.N_FEATS, utils.N_FEATS//2, DP) for mod in MODS}
+    latent_models = {mod: model.LatentModel(mod, N_FEATS, N_FEATS // 2, DP) for mod in MODS}
     # initialize the shared mlp model for alignment module
-    shared_mlp_model = model.AlignEmb(ninp=utils.N_FEATS, nout=utils.N_FEATS, dropout=DP)
+    align_model = model.AlignModel(ninp=N_FEATS, nout=N_FEATS, dropout=DP)
     # initialize the reference mlp model for heterogeneity module
     # Note: test_mode doesn't need reference model because it's used to update params: w_m
     if not TEST_MODE:
-        ref_mlp_models =
+        ref_model = model.HetModel(nfeat=N_FEATS, nhid=N_FEATS // 2, dropout=DP)
+        ref_params = get_hyper_params({'ref': ref_model})
+        ref_optim = optim.Adam(ref_params, lr=LR, weight_decay=W_DECAY)
     # initialize persuasiveness model to predict persuasiveness with H_align, H_het and X_meta
+    pers_model = model.PersModel(nmod=len(MODS), nfeat=N_FEATS, nhid=N_FEATS // 2, dropout=DP)
 
-    # 3 - Initialize trained parameters: theta and concat weights: w_a, w_v, w_l
+    # initialize m2p2 models and hyper-parameters and optimizer
+    m2p2_models = latent_models
+    m2p2_models['align'] = align_model
+    m2p2_models['pers'] = pers_model
+
+    m2p2_params = get_hyper_params(m2p2_models)
+    m2p2_optim = optim.Adam(m2p2_params, lr=LR, weight_decay=W_DECAY)
+    print('####### total m2p2 hyper-parameters ', count_hyper_params(m2p2_params))
+
+    # 3 - Initialize concat weights: w_a, w_v, w_l
+    weight_mod = {mod: 1. / len(MODS) for mod in MODS}
 
     # 4 - Train or Test
     if not TEST_MODE:
+        min_loss_pers = 1e5
         #### Master Procedure Start ####
+        bar_N = tqdm(range(N_EPOCHS), desc='master procedure')
+        for epoch in bar_N:
+            start_time = time.time()
+            #### Slave Procedure Start ####
+            # train ref model
+            bar_n = tqdm(range(n_EPOCHS), desc='slave procedure')
+            for slave_epoch in bar_n:
+                train_loss_ref = train_ref(m2p2_models, ref_model, MODS, tra_loader, ref_optim)
 
-        #### Slave Procedure Start ####
+            # eval ref model and update weight_mod
+            eval_loss_ref_mod = eval_ref(m2p2_models, ref_model, MODS, val_loader)
+            weight_mod = update_weight_mod(MODS, old_weight_mod=weight_mod, loss_ref_mod=eval_loss_ref_mod)
+            #### Slave Procedure End ####
 
-        #### Slave Procedure End ####
+            # train m2p2 model
+            train_loss_align, train_loss_pers = train_m2p2(m2p2_models, MODS, tra_loader, m2p2_optim, weight_mod)
+            # eval and save m2p2 model
+            eval_loss_align, eval_loss_pers = eval_m2p2(m2p2_models, MODS, val_loader, weight_mod)
+            if eval_loss_pers < min_loss_pers:
+                min_loss_pers = eval_loss_pers
+                saveModel(FOLD, m2p2_models, weight_mod)
 
+            # output loss information
+            end_time = time.time()
+            if VERBOSE:
+                epoch_mins, epoch_secs = calc_epoch_time(start_time, end_time)
+                print(f'Epoch: {epoch + 1:02} | Time: {epoch_mins}m {epoch_secs}s')
+                print(f'\tTrain alignment loss:{train_loss_align:.5f}\tTrain persuasion loss:{train_loss_pers:.5f}')
+                print(f'\tVal alignment loss:{eval_loss_align:.5f}\tVal persuasion loss:{eval_loss_pers:.5f}')
         #### Master Procedure End ####
-        pass
     else:
-        pass
+        m2p2_models, weight_mod = loadModel(FOLD, m2p2_models)
+        test_loss_align, test_loss_pers = eval_m2p2(m2p2_models, MODS, tes_loader, weight_mod)
+        print('MSE:', round(test_loss_pers, 3))

@@ -13,12 +13,14 @@ import torchvision.models
 from torch.nn.modules.container import ModuleList
 from torch.nn import TransformerEncoder, TransformerEncoderLayer
 
+from utils import *
+
 
 # 0 - Init Module
 # The model generate primary input embedding of one modality
 class InputEmb(nn.Module):
     def __init__(self, ninp, feat_dim=16, dropout=0.1):
-        super().__init__()
+        super(InputEmb, self).__init__()
         self.fc = nn.Linear(ninp, feat_dim)
         self.bn = nn.BatchNorm1d(feat_dim)
         self.dropout = nn.Dropout(dropout)
@@ -70,9 +72,9 @@ class PositionalEncoding(nn.Module):
 
 
 # The model generate the compact latent embedding of one modality
-class LatentEmb(nn.Module):
+class LatentModel(nn.Module):
     def __init__(self, mod, nfeat=16, nhid=8, dropout=0.1):
-        super(LatentEmb, self).__init__()
+        super(LatentModel, self).__init__()
 
         # question: it means?
         # answer:
@@ -91,9 +93,7 @@ class LatentEmb(nn.Module):
     def forward(self, src, seq_msk):
         # N: batch size, S: sequence length
         N, S = src.size()[0], src.size()[1]
-        feats = torch.stack(
-            [self.feat_exa(src[i]) for i in range(N)],
-            dim=0).transpose(0, 1)
+        feats = torch.stack([self.feat_exa(src[i]) for i in range(N)], dim=0).transpose(0, 1)
         # feats: (S,N,D)
         seq = self.transformer_emb(feats, seq_msk)
         seq = F.relu(seq)
@@ -106,10 +106,10 @@ class LatentEmb(nn.Module):
 
 
 # 1 - Alignment Module
-# Get alignment embeddings $H^align$ and $H^s_m$ with $H^latent_m$
-class AlignEmb(nn.Module):
+# Get alignment embeddings $H^s_m$ with $H^latent_m$
+class AlignModel(nn.Module):
     def __init__(self, ninp, nout, dropout=0.1):
-        super(AlignEmb, self).__init__()
+        super(AlignModel, self).__init__()
         self.fc1 = nn.Linear(ninp, nout)
         self.dropout = nn.Dropout(dropout)
 
@@ -117,22 +117,20 @@ class AlignEmb(nn.Module):
         # get $H^s_m$ with $H^latent_m$
         s_emb_mod = {}      # H^s_m
         for mod, latent_emb in latent_emb_mod.items():
-            s_emb_mod[mod] = F.relu(self.dropout(self.fc1(latent_emb)))
+            x = self.fc1(latent_emb)
+            x = self.dropout(x)
+            x = F.relu(x)
+            s_emb_mod[mod] = x
 
-        # get $H^align$ with $H^s_m$
-        align_cat = torch.cat([emb.unsqueeze(dim=0) for emb in s_emb_mod.values()], dim=0)
-        align_emb = torch.mean(align_cat, dim=0)    # H^align
-
-        # return: H^align, H^s_m
-        return align_emb, s_emb_mod
+        return s_emb_mod    # H^s_m
 
 
 # 2 - Heterogeneity Module
-# Note: 注意Align与Het的区别，Align可以拼在一起，而Het中的ref是三个分开训的
+# Note: 为了保持Align与Het的统一，把三个ref model也拼在一起训练，相当于也用虚线圈起来了
 # the uni-modal reference models, used to calculate $L^ref_m$ and update weights: $w_m$
-class RefModel(nn.Module):
+class HetModel(nn.Module):
     def __init__(self, nfeat=16, nhid=8, dropout=0.1):
-        super(RefModel, self).__init__()
+        super(HetModel, self).__init__()
 
         ninp = nfeat
         nout = 1
@@ -142,18 +140,41 @@ class RefModel(nn.Module):
         self.dropout = nn.Dropout(dropout)
         self.sigm = nn.Sigmoid()
 
-    def forward(self, latent_emb):
+    def forward(self, latent_emb_mod):
         # get $Y^ref_m$ with $H^latent_m$
-        # question: why dim=1?
-        # answer: 我认为完全无必要，因为align是cat在一起训练的，而ref是分开训练的，这里只会传进来对应mod的emb供训练
-        # x = torch.cat([v for k, v in latent_emb_mod.items()], dim=1)
+        ref_emb_mod = {}
+        for mod, latent_emb in latent_emb_mod.items():
+            x = self.fc1(latent_emb)
+            x = F.relu(self.dropout(x))
+            x = self.fc2(x)
+            x = F.relu(x)
+            x = self.fc3(x)
+            x = self.sigm(x)
+            ref_emb_mod[mod] = x
 
-        x = self.fc1(latent_emb)
+        return ref_emb_mod
+
+
+# 3 - Persuasiveness Module
+class PersModel(nn.Module):
+    def __init__(self, nmod=3, nfeat=16, nhid=8, dropout=0.1):
+        super(PersModel, self).__init__()
+
+        # input: heterogeneity emb (nmod * nfeat), alignment emb (nfeat), debate meta-data (1)
+        ninp = (nmod+1) * nfeat + 2
+        nout = 1
+        self.fc1 = nn.Linear(ninp, 2 * nhid)
+        self.fc2 = nn.Linear(2 * nhid, nhid)
+        self.fc3 = nn.Linear(nhid, nout)
+        self.dropout = nn.Dropout(dropout)
+        self.sigm = nn.Sigmoid()
+
+    def forward(self, align_emb, het_emb, meta_emb):
+        x = torch.cat([align_emb, het_emb, meta_emb], dim=1)
+        x = self.fc1(x)
         x = F.relu(self.dropout(x))
         x = self.fc2(x)
         x = F.relu(x)
         x = self.fc3(x)
         return self.sigm(x)
-
-# 3 - Persuasiveness Module
 
