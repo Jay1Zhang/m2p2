@@ -33,7 +33,7 @@ for epoch = 1, ..., N do
 	
 	Calculate $L^pers$ with $H^align$, $H^het$ and $X_meta$ in Equation(11)
 	Calculate $L^final$ with $L^pers$ and $L^align$ in Equation(12)
-	Update all parameters.
+	Update hyper-parameters.
 	
 	
 % Master Procedure End
@@ -41,7 +41,10 @@ for epoch = 1, ..., N do
 
 #### Bug Log
 
-- 如下
-    > RuntimeError: Tensor for 'out' is on CPU, Tensor for argument #1 'self' is on CPU, but expected them to be on GPU (while checking arguments for addmm)
+- bug-1
+    - > RuntimeError: Tensor for 'out' is on CPU, Tensor for argument #1 'self' is on CPU, but expected them to be on GPU (while checking arguments for addmm)
     - init model时要 .to(device) 一下
 
+- bug-2
+    - > AttributeError: 'numpy.ndarray' object has no attribute 'softmax'
+    - 只能先用 scipy.special 里的softmax凑合一下了

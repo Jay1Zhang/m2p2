@@ -5,6 +5,7 @@ import os
 import torch
 import torch.nn as nn
 import numpy as np
+from scipy.special import softmax
 
 
 FOLDS_DIR = './folds_split/'    # folds directory
@@ -102,7 +103,8 @@ def calcPersLoss(pred, target):
 def update_weight_mod(MODS, old_weight_mod, loss_ref_mod):
     # calc tilde weight by softmax
     x = -BETA * np.array(list(loss_ref_mod.values()))
-    tilde_weights = torch.nn.functional.softmax(x, dim=0)
+    #tilde_weights = torch.nn.functional.softmax(x, dim=0)
+    tilde_weights = softmax(x)
     tilde_weight_mod = dict(zip(MODS, tilde_weights))
 
     # calc new weight mod
