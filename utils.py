@@ -31,6 +31,7 @@ W_DECAY = 1e-5
 # Device configuration
 # questions here
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print("Let's use", torch.cuda.device_count(), "GPUs!")
 torch.manual_seed(3)
 torch.cuda.manual_seed_all(3)
 torch.backends.cudnn.deterministic = True
