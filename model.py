@@ -93,12 +93,12 @@ class LatentModel(nn.Module):
         # N: batch size, S: sequence length
         N, S = src.size()[0], src.size()[1]
         feats = torch.stack([self.feat_exa(src[i]) for i in range(N)], dim=0).transpose(0, 1)
-        # feats: (S,N,ninp[73, 512, 200])
+        # feats: (S,N,16)
         seq = self.transformer_emb(feats, seq_msk) # (S, N, 16)
         seq = F.relu(seq)
         # max_pool
         msked_tmp = seq * (~seq_msk.unsqueeze(-1).transpose(0, 1)).float()
-        out = torch.max(msked_tmp, dim=0)[0]
+        out = torch.max(msked_tmp, dim=0)[0]    # (N, 16)
         return out
 
 ############################## question end ##################################

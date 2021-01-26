@@ -32,7 +32,7 @@ if __name__ == '__main__':
 
     TEST_MODE = args.test_mode
     VERBOSE = args.verbose
-    #TEST_MODE, VERBOSE = False, True
+    TEST_MODE, VERBOSE = True, True
 
     #############
 
@@ -60,7 +60,12 @@ if __name__ == '__main__':
 
     m2p2_params = get_hyper_params(m2p2_models)
     m2p2_optim = optim.Adam(m2p2_params, lr=LR, weight_decay=W_DECAY)
-    print('####### total m2p2 hyper-parameters ', count_hyper_params(m2p2_params))
+
+    if VERBOSE:
+        print('####### total m2p2 hyper-parameters ', count_hyper_params(m2p2_params))
+        for k, v in m2p2_models.items():
+            print(v)
+            print(count_hyper_params(v.parameters()))
 
     # 3 - Initialize concat weights: w_a, w_v, w_l
     weight_mod = {mod: 1. / len(MODS) for mod in MODS}

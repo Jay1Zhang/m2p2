@@ -40,8 +40,8 @@ def gen_dataloader(fold, MODS):
 
 # get frame number: filename[st:ed] from the filename string
 def get_frame_no(filename, form='npy'):
-    return filename[filename.rfind('/') + 1: filename.rfind(f'.{form}')]  # Linux
-    #return filename[filename.rfind('\\') + 1 : filename.rfind(f'.{form}')]  # Win10
+    #return filename[filename.rfind('/') + 1: filename.rfind(f'.{form}')]  # Linux
+    return filename[filename.rfind('\\') + 1 : filename.rfind(f'.{form}')]  # Win10
 
 
 # qps dataset class
@@ -84,7 +84,7 @@ class qpsDataset(Dataset):
             seq_len = data.size()[0]
             padding_size = list(data.size())
             padding_size[0] = self.max_feat_len[mod]
-
+            # padding: {a:[220, 73], v:[350, 512], l:[610, 200]}
             padding_data = torch.zeros(padding_size, dtype=torch.float)
             padding_data[:seq_len] = data[:seq_len]
             padding_msk = torch.ones(padding_size[0], dtype=torch.bool)
