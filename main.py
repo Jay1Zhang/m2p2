@@ -32,7 +32,6 @@ if __name__ == '__main__':
 
     TEST_MODE = args.test_mode
     VERBOSE = args.verbose
-    # TEST_MODE, VERBOSE = False, True
 
     #############
 

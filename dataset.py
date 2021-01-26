@@ -41,7 +41,7 @@ def gen_dataloader(fold, MODS):
 # get frame number: filename[st:ed] from the filename string
 def get_frame_no(filename, form='npy'):
     return filename[filename.rfind('/') + 1: filename.rfind(f'.{form}')]  # Linux
-    # return filename[filename.rfind('\\') + 1 : filename.rfind(f'.{form}')]  # Win10
+    #return filename[filename.rfind('\\') + 1 : filename.rfind(f'.{form}')]  # Win10
 
 
 # qps dataset class
@@ -52,9 +52,9 @@ class qpsDataset(Dataset):
         self.segs = segs
 
         self.len = len(self.segs)
-        max_n_seg = max([len(seg) for seg in segs])     # max_n_seg = 5
         # question: why 44, 70, 122?
-        # answer: 似乎是一小段sequence中捕捉到的特征数量的最大值，目的是为了后面padding对齐
+        # answer: 经检验，这是所有seg中特征数量的最大值，乘上max_n_seg后，即为每个sequence可能有的最大特征数，方便后面padding对齐
+        max_n_seg = max([len(seg) for seg in segs])  # max_n_seg = 5
         self.max_feat_len = {'a': 44 * max_n_seg, 'v': 70 * max_n_seg, 'l': 122 * max_n_seg}
 
         self.feat_src = './qps_dataset/'
