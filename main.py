@@ -34,6 +34,7 @@ if __name__ == '__main__':
     VERBOSE = args.verbose
     TEST_MODE, VERBOSE = True, True
 
+
     #############
 
     # 1 - load dataset
