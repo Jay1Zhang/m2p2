@@ -94,6 +94,7 @@ if __name__ == '__main__':
             # eval and save m2p2 model
             eval_loss_align, eval_loss_pers = eval_m2p2(m2p2_models, MODS, val_loader, weight_mod)
             if eval_loss_pers < min_loss_pers:
+                print(f'[SAVE MODEL] eval pers loss: {eval_loss_pers:.5f}\tmini pers loss: {min_loss_pers:.5f}')
                 min_loss_pers = eval_loss_pers
                 saveModel(FOLD, m2p2_models, weight_mod)
 
@@ -103,7 +104,7 @@ if __name__ == '__main__':
                 epoch_mins, epoch_secs = calc_epoch_time(start_time, end_time)
                 print(f'Epoch: {epoch + 1:02} | Time: {epoch_mins}m {epoch_secs}s')
                 print(f'\tTrain alignment loss:{train_loss_align:.5f}\tTrain persuasion loss:{train_loss_pers:.5f}')
-                print(f'\tVal alignment loss:{eval_loss_align:.5f}\tVal persuasion loss:{eval_loss_pers:.5f}')
+                print(f'\tEval alignment loss:{eval_loss_align:.5f}\tEval persuasion loss:{eval_loss_pers:.5f}')
         #### Master Procedure End ####
     else:
         m2p2_models, weight_mod = loadModel(FOLD, m2p2_models)

@@ -169,7 +169,8 @@ class PersModel(nn.Module):
         self.sigm = nn.Sigmoid()
 
     def forward(self, align_emb, het_emb, meta_emb):
-        x = torch.cat([align_emb, het_emb, meta_emb], dim=1)
+        # x = torch.cat([align_emb, het_emb, meta_emb], dim=1)
+        x = torch.cat([het_emb, align_emb, meta_emb], dim=1)
         x = self.fc1(x)
         x = F.relu(self.dropout(x))
         x = self.fc2(x)
