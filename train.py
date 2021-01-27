@@ -67,6 +67,7 @@ def train_m2p2(m2p2_models, MODS, iterator, optimizer, weight_mod):
         loss.backward()
         optimizer.step()
 
+    print(f'\tTrain final loss:{loss.item():.5f}')
     return total_loss_align / (i_batch+1), total_loss_pers / (i_batch+1)    # mean
 
 
@@ -135,6 +136,4 @@ def eval_ref(m2p2_models, ref_model, MODS, iterator):
         loss_ref_mod[mod] = total_loss_ref_mod[mod] / (i_batch+1)
 
     return loss_ref_mod
-
-
 

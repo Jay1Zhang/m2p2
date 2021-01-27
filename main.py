@@ -32,8 +32,6 @@ if __name__ == '__main__':
 
     TEST_MODE = args.test_mode
     VERBOSE = args.verbose
-    TEST_MODE, VERBOSE = True, True
-
 
     #############
 
@@ -109,4 +107,5 @@ if __name__ == '__main__':
     else:
         m2p2_models, weight_mod = loadModel(FOLD, m2p2_models)
         test_loss_align, test_loss_pers = eval_m2p2(m2p2_models, MODS, tes_loader, weight_mod)
+        print(f'Test alignment loss:{test_loss_align:.5f}\tTest persuasion loss:{test_loss_pers:.5f}')
         print('MSE:', round(test_loss_pers, 3))
