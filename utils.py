@@ -17,16 +17,18 @@ N_WORKERS = 4   # thread number of dataloader
 N_FEATS = 16
 MAX_DUR = 482   # we divided all speaking length by this max length to normalize
 
-GAMMA = 0.1     # loss_final = L_pers + GAMMA * L_align
+GAMMA = 0.2     # loss_final = L_pers + GAMMA * L_align
 ALPHA = 0.5     # update rate for modality weights
 BETA = 50       # weight in the softmax function for modality weights
 
-N_EPOCHS = 20  # master training procedure (alg 1 in paper)
+N_EPOCHS = 40   # master training procedure (alg 1 in paper)
 n_EPOCHS = 10   # slave training procedure (alg 1 in paper)
 
 # optimizer
-LR = 1e-4
-W_DECAY = 1e-5
+LR = 1e-3
+W_DECAY = 1e-5      # L2正则系数
+STEP_SIZE = 10
+SCHE_GAMMA = 0.1
 
 # Device configuration
 # questions here
@@ -51,8 +53,9 @@ def count_hyper_params(params):
     return sum(p.numel() for p in params if p.requires_grad)
 
 
-def setModelMode(model_dict, is_train_mode=True):
+def setModelMode(model_dict, scheduler=None, is_train_mode=True):
     if is_train_mode:
+        scheduler.step()
         for model in model_dict.values():
             model.train()
     else:

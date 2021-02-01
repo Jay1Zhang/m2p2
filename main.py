@@ -32,8 +32,8 @@ if __name__ == '__main__':
 
     TEST_MODE = args.test_mode
     VERBOSE = args.verbose
+    #TEST_MODE = True
 
-    TEST_MODE = True
     #############
 
     # 1 - load dataset
@@ -50,6 +50,7 @@ if __name__ == '__main__':
         ref_model = model.HetModel(nfeat=N_FEATS, nhid=N_FEATS // 2, dropout=DP).to(device)
         ref_params = get_hyper_params({'ref': ref_model})
         ref_optim = optim.Adam(ref_params, lr=LR, weight_decay=W_DECAY)
+        ref_scheduler = optim.lr_scheduler.StepLR(ref_optim, step_size=STEP_SIZE, gamma=SCHE_GAMMA)
     # initialize persuasiveness model to predict persuasiveness with H_align, H_het and X_meta
     pers_model = model.PersModel(nmod=len(MODS), nfeat=N_FEATS, nhid=N_FEATS // 2, dropout=DP).to(device)
 
@@ -60,6 +61,7 @@ if __name__ == '__main__':
 
     m2p2_params = get_hyper_params(m2p2_models)
     m2p2_optim = optim.Adam(m2p2_params, lr=LR, weight_decay=W_DECAY)
+    m2p2_scheduler = optim.lr_scheduler.StepLR(m2p2_optim, step_size=STEP_SIZE, gamma=SCHE_GAMMA)
 
     if VERBOSE:
         print('####### total m2p2 hyper-parameters ', count_hyper_params(m2p2_params))
@@ -81,7 +83,7 @@ if __name__ == '__main__':
             # train ref model
             bar_n = tqdm(range(n_EPOCHS), desc='slave procedure')
             for slave_epoch in bar_n:
-                train_loss_ref = train_ref(m2p2_models, ref_model, MODS, tra_loader, ref_optim)
+                train_loss_ref = train_ref(m2p2_models, ref_model, MODS, tra_loader, ref_optim, ref_scheduler)
 
             # eval ref model and update weight_mod
             eval_loss_ref_mod = eval_ref(m2p2_models, ref_model, MODS, val_loader)
@@ -89,7 +91,7 @@ if __name__ == '__main__':
             #### Slave Procedure End ####
 
             # train m2p2 model
-            train_loss_align, train_loss_pers = train_m2p2(m2p2_models, MODS, tra_loader, m2p2_optim, weight_mod)
+            train_loss_align, train_loss_pers = train_m2p2(m2p2_models, MODS, tra_loader, m2p2_optim, m2p2_scheduler, weight_mod)
             # eval and save m2p2 model
             eval_loss_align, eval_loss_pers = eval_m2p2(m2p2_models, MODS, val_loader, weight_mod)
             if eval_loss_pers < min_loss_pers:
@@ -101,7 +103,7 @@ if __name__ == '__main__':
             end_time = time.time()
             if VERBOSE:
                 epoch_mins, epoch_secs = calc_epoch_time(start_time, end_time)
-                print(f'Epoch: {epoch + 1:02} | Time: {epoch_mins}m {epoch_secs}s')
+                print(f'Epoch: {epoch + 1:02}/{N_EPOCHS} | Time: {epoch_mins}m {epoch_secs}s')
                 print(f'\tTrain alignment loss:{train_loss_align:.5f}\tTrain persuasion loss:{train_loss_pers:.5f}')
                 print(f'\tEval alignment loss:{eval_loss_align:.5f}\tEval persuasion loss:{eval_loss_pers:.5f}')
         #### Master Procedure End ####
