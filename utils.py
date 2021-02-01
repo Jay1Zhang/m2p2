@@ -53,9 +53,8 @@ def count_hyper_params(params):
     return sum(p.numel() for p in params if p.requires_grad)
 
 
-def setModelMode(model_dict, scheduler=None, is_train_mode=True):
+def setModelMode(model_dict, is_train_mode=True):
     if is_train_mode:
-        scheduler.step()
         for model in model_dict.values():
             model.train()
     else:

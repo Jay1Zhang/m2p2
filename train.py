@@ -53,7 +53,7 @@ def fit_m2p2(m2p2_models, MODS, sample_batched, weight_mod):
 
 
 def train_m2p2(m2p2_models, MODS, iterator, optimizer, scheduler, weight_mod):
-    setModelMode(m2p2_models, scheduler, is_train_mode=True)
+    setModelMode(m2p2_models, is_train_mode=True)
     total_loss_align, total_loss_pers = 0, 0
 
     for i_batch, sample_batched in enumerate(iterator):
@@ -67,6 +67,7 @@ def train_m2p2(m2p2_models, MODS, iterator, optimizer, scheduler, weight_mod):
         loss.backward()
         optimizer.step()
 
+    scheduler.step()
     print(f'\tTrain final loss:{loss.item():.5f}')
     return total_loss_align / (i_batch+1), total_loss_pers / (i_batch+1)    # mean
 
@@ -105,7 +106,7 @@ def fit_ref(m2p2_models, ref_model, MODS, sample_batched):
 
 
 def train_ref(m2p2_models, ref_model, MODS, iterator, optimizer, scheduler):
-    setModelMode({'ref': ref_model}, scheduler, is_train_mode=True)
+    setModelMode({'ref': ref_model}, is_train_mode=True)
     total_loss_ref = 0
 
     for i_batch, sample_batched in enumerate(iterator):
@@ -118,6 +119,7 @@ def train_ref(m2p2_models, ref_model, MODS, iterator, optimizer, scheduler):
         loss_ref.backward()
         optimizer.step()
 
+    scheduler.step()
     return total_loss_ref / (i_batch+1)
 
 
