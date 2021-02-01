@@ -21,11 +21,11 @@ GAMMA = 0.1     # loss_final = L_pers + GAMMA * L_align
 ALPHA = 0.5     # update rate for modality weights
 BETA = 50       # weight in the softmax function for modality weights
 
-N_EPOCHS = 200  # master training procedure (alg 1 in paper)
+N_EPOCHS = 20  # master training procedure (alg 1 in paper)
 n_EPOCHS = 10   # slave training procedure (alg 1 in paper)
 
 # optimizer
-LR = 1e-3
+LR = 1e-4
 W_DECAY = 1e-5
 
 # Device configuration

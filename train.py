@@ -57,13 +57,13 @@ def train_m2p2(m2p2_models, MODS, iterator, optimizer, weight_mod):
     total_loss_align, total_loss_pers = 0, 0
 
     for i_batch, sample_batched in enumerate(iterator):
+        optimizer.zero_grad()
         # forward
         loss_align, loss_pers, loss = fit_m2p2(m2p2_models, MODS, sample_batched, weight_mod)
         total_loss_align += loss_align.item()
         total_loss_pers += loss_pers.item()
 
         # backward
-        optimizer.zero_grad()
         loss.backward()
         optimizer.step()
 
@@ -109,12 +109,12 @@ def train_ref(m2p2_models, ref_model, MODS, iterator, optimizer):
     total_loss_ref = 0
 
     for i_batch, sample_batched in enumerate(iterator):
+        optimizer.zero_grad()
         # forward
         loss_ref, loss_ref_mod = fit_ref(m2p2_models, ref_model, MODS, sample_batched)
         total_loss_ref += loss_ref.item()
 
         # backward
-        optimizer.zero_grad()
         loss_ref.backward()
         optimizer.step()
 

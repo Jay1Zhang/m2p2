@@ -43,6 +43,8 @@ class TransformerEmb(nn.Module):
         self.ninp = ninp
 
     def forward(self, src, seq_msk):
+        # Input:    src(S, N, E:16),  seq_msk(N, S)
+        # Output:   out(T, N, E:16)
         src *= math.sqrt(self.ninp)
         # positional encoder
         src = self.pos_encoder(src)
@@ -52,6 +54,7 @@ class TransformerEmb(nn.Module):
 
 
 # positional encoding
+# 无可学习参数的PositionEncoding层
 class PositionalEncoding(nn.Module):
     def __init__(self, d_model, dropout, max_len=5000):
         super(PositionalEncoding, self).__init__()
@@ -90,14 +93,16 @@ class LatentModel(nn.Module):
         self.transformer_emb = TransformerEmb(nfeat, nhead, nhid, nlayers, dropout)
 
     def forward(self, src, seq_msk):
-        # N: batch size, S: sequence length
+        # Input:    src(N, S, E),  seq_msk(N, S)
+        #           where N: batch size, S: sequence length, E: {a:73, v:512, l:200}
+        # Output:   out(T, N, 16)
         N, S = src.size()[0], src.size()[1]
         feats = torch.stack([self.feat_exa(src[i]) for i in range(N)], dim=0).transpose(0, 1)
         # feats: (S,N,16)
-        seq = self.transformer_emb(feats, seq_msk) # (S, N, 16)
+        seq = self.transformer_emb(feats, seq_msk)  # (S, N, 16)
         seq = F.relu(seq)
         # max_pool
-        msked_tmp = seq * (~seq_msk.unsqueeze(-1).transpose(0, 1)).float()
+        msked_tmp = seq * (~seq_msk.unsqueeze(-1).transpose(0, 1)).float()  # (220, N, 16)
         out = torch.max(msked_tmp, dim=0)[0]    # (N, 16)
         return out
 

@@ -84,19 +84,19 @@ class qpsDataset(Dataset):
             seq_len = data.size()[0]
             padding_size = list(data.size())
             padding_size[0] = self.max_feat_len[mod]
-            # padding: {a:[220, 73], v:[350, 512], l:[610, 200]}
+            # padding: (S, E) - {a:[220, 73], v:[350, 512], l:[610, 200]}
             padding_data = torch.zeros(padding_size, dtype=torch.float)
             padding_data[:seq_len] = data[:seq_len]
             padding_msk = torch.ones(padding_size[0], dtype=torch.bool)
             padding_msk[:seq_len] = msk[:seq_len]
 
-            sample[f'{mod}_data'] = padding_data
-            sample[f'{mod}_msk'] = padding_msk
+            sample[f'{mod}_data'] = padding_data    # (S, E)
+            sample[f'{mod}_msk'] = padding_msk      # (S)
 
         return sample
 
     # questions: 为什么msk都给了false？这不是元数据吗？怎么跟自己造数据似的？
-    # answer: ?
+    # answer: mask并非标签，而是在Transformer中作为输入序列src的附加掩码，用于屏蔽padding的无意义数据
     # load acoustic features from covarep_norm.npy
     def load_audio_feat(self, seg):
         feat = np.load(f'{self.feat_src}/{seg}/covarep_norm.npy')
