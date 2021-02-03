@@ -30,17 +30,19 @@ class InputEmb(nn.Module):
         x = self.bn(x)
         return F.relu(self.dropout(x))
 
+
 ############################## question here ##################################
 # positional encoder + transformer encoder
 class TransformerEmb(nn.Module):
     def __init__(self, ninp, nhead, nhid, nlayers=1, dropout=0.1):
         super(TransformerEmb, self).__init__()
         # self.model_type = 'Transformer'
-        self.pos_encoder = PositionalEncoding(ninp, dropout)
+        self.ninp = ninp
+        # self.pos_encoder = PositionalEncoding(ninp, dropout)
+        self.pos_encoder = LearnedPositionalEncoding(ninp, dropout)
         # 1-layer transformer encoder
         encoder_layers = TransformerEncoderLayer(ninp, nhead, nhid, dropout)
         self.transformer_encoder = TransformerEncoder(encoder_layers, nlayers)
-        self.ninp = ninp
 
     def forward(self, src, seq_msk):
         # Input:    src(S, N, E:16),  seq_msk(N, S)
@@ -70,6 +72,18 @@ class PositionalEncoding(nn.Module):
 
     def forward(self, x):
         x = x + self.pe[:x.size(0), :]
+        return self.dropout(x)
+
+
+# 有可学习参数的PositionEncoding层
+class LearnedPositionalEncoding(nn.Embedding):
+    def __init__(self, d_model, dropout=0.1, max_len=5000):
+        super().__init__(max_len, d_model)
+        self.dropout = nn.Dropout(p=dropout)
+
+    def forward(self, x):
+        weight = self.weight.data.unsqueeze(1)
+        x = x + weight[:x.size(0), :]
         return self.dropout(x)
 
 

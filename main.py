@@ -36,6 +36,16 @@ if __name__ == '__main__':
 
     #############
 
+    # 0 - Device configuration
+    # questions: why set seed?
+    # answer: 保证代码在同一设备上的可复现性
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    print("Let's use", torch.cuda.device_count(), "GPUs!")
+    torch.manual_seed(3)
+    torch.cuda.manual_seed_all(3)
+    torch.backends.cudnn.deterministic = True
+    # torch.autograd.set_detect_anomaly(True)
+
     # 1 - load dataset
     tra_loader, val_loader, tes_loader = gen_dataloader(FOLD, MODS)
 

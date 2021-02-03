@@ -21,23 +21,14 @@ GAMMA = 0.2     # loss_final = L_pers + GAMMA * L_align
 ALPHA = 0.5     # update rate for modality weights
 BETA = 50       # weight in the softmax function for modality weights
 
-N_EPOCHS = 40   # master training procedure (alg 1 in paper)
+N_EPOCHS = 30   # master training procedure (alg 1 in paper)
 n_EPOCHS = 10   # slave training procedure (alg 1 in paper)
 
 # optimizer
-LR = 1e-3
+LR = 1e-4
 W_DECAY = 1e-5      # L2正则系数
 STEP_SIZE = 10
 SCHE_GAMMA = 0.1
-
-# Device configuration
-# questions here
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-print("Let's use", torch.cuda.device_count(), "GPUs!")
-torch.manual_seed(3)
-torch.cuda.manual_seed_all(3)
-torch.backends.cudnn.deterministic = True
-# torch.autograd.set_detect_anomaly(True)
 
 
 def get_hyper_params(model_dict):
