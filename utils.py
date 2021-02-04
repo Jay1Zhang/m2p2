@@ -25,10 +25,22 @@ N_EPOCHS = 30   # master training procedure (alg 1 in paper)
 n_EPOCHS = 10   # slave training procedure (alg 1 in paper)
 
 # optimizer
-LR = 1e-4
+LR = 1e-3
 W_DECAY = 1e-5      # L2正则系数
 STEP_SIZE = 10
 SCHE_GAMMA = 0.1
+
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+
+def config_device():
+    # questions: why set seed?
+    # answer: 保证代码在同一设备上的可复现性
+    print("Let's use", torch.cuda.device_count(), "GPUs!")
+    torch.manual_seed(3)
+    torch.cuda.manual_seed_all(3)
+    torch.backends.cudnn.deterministic = True
+    # torch.autograd.set_detect_anomaly(True)
 
 
 def get_hyper_params(model_dict):

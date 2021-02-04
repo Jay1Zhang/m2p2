@@ -112,7 +112,7 @@ class LatentModel(nn.Module):
         # Output:   out(T, N, 16)
         N, S = src.size()[0], src.size()[1]
         feats = torch.stack([self.feat_exa(src[i]) for i in range(N)], dim=0).transpose(0, 1)
-        # feats: (S,N,16)
+        # feats: (S, N, 16)
         seq = self.transformer_emb(feats, seq_msk)  # (S, N, 16)
         seq = F.relu(seq)
         # max_pool
