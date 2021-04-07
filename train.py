@@ -71,8 +71,7 @@ def train_m2p2(m2p2_models, MODS, iterator, optimizer, scheduler, weight_mod):
         optimizer.step()
 
     scheduler.step()
-    print(f'\tN_batch:{i_batch + 1}\tTrain final loss:{loss.item():.5f}\tTrain Accuracy:{total_acc / (i_batch + 1):.5f}')
-    return total_loss_align / (i_batch+1), total_loss_pers / (i_batch+1)    # mean
+    return total_loss_align / (i_batch+1), total_loss_pers / (i_batch+1), total_acc / (i_batch + 1)    # mean
 
 
 def eval_m2p2(m2p2_models, MODS, iterator, weight_mod):
@@ -88,8 +87,7 @@ def eval_m2p2(m2p2_models, MODS, iterator, weight_mod):
             total_loss_pers += loss_pers.item()
             total_acc += acc.item()
 
-    print(f'\tN_batch:{i_batch + 1}\tEval Accuracy:{total_acc / (i_batch + 1):.5f}')
-    return total_loss_align / (i_batch+1), total_loss_pers / (i_batch+1)    # mean
+    return total_loss_align / (i_batch+1), total_loss_pers / (i_batch+1), total_acc / (i_batch + 1)    # mean
 
 
 def fit_ref(m2p2_models, ref_model, MODS, sample_batched):

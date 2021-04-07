@@ -95,9 +95,9 @@ if __name__ == '__main__':
             #### Slave Procedure End ####
 
             # train m2p2 model
-            train_loss_align, train_loss_pers = train_m2p2(m2p2_models, MODS, tra_loader, m2p2_optim, m2p2_scheduler, weight_mod)
+            train_loss_align, train_loss_pers, train_acc = train_m2p2(m2p2_models, MODS, tra_loader, m2p2_optim, m2p2_scheduler, weight_mod)
             # eval and save m2p2 model
-            eval_loss_align, eval_loss_pers = eval_m2p2(m2p2_models, MODS, val_loader, weight_mod)
+            eval_loss_align, eval_loss_pers, eval_acc = eval_m2p2(m2p2_models, MODS, val_loader, weight_mod)
             if eval_loss_pers < min_loss_pers:
                 print(f'[SAVE MODEL] eval pers loss: {eval_loss_pers:.5f}\tmini pers loss: {min_loss_pers:.5f}')
                 min_loss_pers = eval_loss_pers
@@ -108,11 +108,11 @@ if __name__ == '__main__':
             if VERBOSE:
                 epoch_mins, epoch_secs = calc_epoch_time(start_time, end_time)
                 print(f'Epoch: {epoch + 1:02}/{N_EPOCHS} | Time: {epoch_mins}m {epoch_secs}s')
-                print(f'\tTrain alignment loss:{train_loss_align:.5f}\tTrain persuasion loss:{train_loss_pers:.5f}')
-                print(f'\tEval alignment loss:{eval_loss_align:.5f}\tEval persuasion loss:{eval_loss_pers:.5f}')
+                print(f'\tTrain alignment loss:{train_loss_align:.5f}\tTrain persuasion loss:{train_loss_pers:.5f}\tTrain Accuracy:{train_acc:.5f}')
+                print(f'\tEval alignment loss:{eval_loss_align:.5f}\tEval persuasion loss:{eval_loss_pers:.5f}\tEval Accuracy:{eval_acc:.5f}')
         #### Master Procedure End ####
     else:
         m2p2_models, weight_mod = loadModel(FOLD, m2p2_models)
-        test_loss_align, test_loss_pers = eval_m2p2(m2p2_models, MODS, tes_loader, weight_mod)
-        print(f'Test alignment loss:{test_loss_align:.5f}\tTest persuasion loss:{test_loss_pers:.5f}')
+        test_loss_align, test_loss_pers, test_acc = eval_m2p2(m2p2_models, MODS, tes_loader, weight_mod)
+        print(f'Test alignment loss:{test_loss_align:.5f}\tTest persuasion loss:{test_loss_pers:.5f}\tTest Accuracy:{test_acc:.5f}')
         print('MSE:', round(test_loss_pers, 3))
