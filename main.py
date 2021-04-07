@@ -17,7 +17,7 @@ if __name__ == '__main__':
     parser.add_argument('--fd', required=False, default=9, type=int, help='fold id')
     parser.add_argument('--mod', required=False, default='avl', type=str,
                         help='modalities: a,v,l, or any combination of them')
-    parser.add_argument('--dp', required=False, default=0.2, type=float, help='dropout')
+    parser.add_argument('--dp', required=False, default=0.4, type=float, help='dropout')
 
     ## boolean flags
     parser.add_argument('--test_mode', default=False, action='store_true',
@@ -32,7 +32,8 @@ if __name__ == '__main__':
 
     TEST_MODE = args.test_mode
     VERBOSE = args.verbose
-    #TEST_MODE = True
+    TEST_MODE = False
+    VERBOSE = True
 
     #############
 
@@ -79,8 +80,8 @@ if __name__ == '__main__':
     if not TEST_MODE:
         min_loss_pers = 1e5
         #### Master Procedure Start ####
-        bar_N = tqdm(range(N_EPOCHS), desc='master procedure')
-        for epoch in bar_N:
+        # bar_N = tqdm(range(N_EPOCHS), desc='master procedure')
+        for epoch in range(N_EPOCHS):
             start_time = time.time()
             #### Slave Procedure Start ####
             # train ref model

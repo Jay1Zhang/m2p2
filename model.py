@@ -38,8 +38,9 @@ class TransformerEmb(nn.Module):
         super(TransformerEmb, self).__init__()
         # self.model_type = 'Transformer'
         self.ninp = ninp
-        # self.pos_encoder = PositionalEncoding(ninp, dropout)
-        self.pos_encoder = LearnedPositionalEncoding(ninp, dropout)
+        self.pos_encoder = PositionalEncoding(ninp, dropout)
+        # self.pos_encoder = LearnedPositionalEncoding(ninp, dropout)
+
         # 1-layer transformer encoder
         encoder_layers = TransformerEncoderLayer(ninp, nhead, nhid, dropout)
         self.transformer_encoder = TransformerEncoder(encoder_layers, nlayers)
@@ -82,7 +83,8 @@ class LearnedPositionalEncoding(nn.Embedding):
         self.dropout = nn.Dropout(p=dropout)
 
     def forward(self, x):
-        weight = self.weight.data.unsqueeze(1)
+        # weight = self.weight.data.unsqueeze(1)  # .data似乎会返回一个requires_grad=False的tensor
+        weight = self.weight.unsqueeze(1)
         x = x + weight[:x.size(0), :]
         return self.dropout(x)
 
