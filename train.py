@@ -48,41 +48,47 @@ def fit_m2p2(m2p2_models, MODS, sample_batched, weight_mod):
     loss_align = calcAlignLoss(s_emb_mod, MODS)
     loss_pers = calcPersLoss(y_pred, y_true)
     loss = loss_pers + GAMMA * loss_align  # final loss, used to backward
+    acc = calcAccuracy(y_pred, y_true)
 
-    return loss_align, loss_pers, loss
+    return loss_align, loss_pers, loss, acc
 
 
 def train_m2p2(m2p2_models, MODS, iterator, optimizer, scheduler, weight_mod):
     setModelMode(m2p2_models, is_train_mode=True)
     total_loss_align, total_loss_pers = 0, 0
+    total_acc = 0
 
     for i_batch, sample_batched in enumerate(iterator):
         optimizer.zero_grad()
         # forward
-        loss_align, loss_pers, loss = fit_m2p2(m2p2_models, MODS, sample_batched, weight_mod)
+        loss_align, loss_pers, loss, acc = fit_m2p2(m2p2_models, MODS, sample_batched, weight_mod)
         total_loss_align += loss_align.item()
         total_loss_pers += loss_pers.item()
+        total_acc += acc.item()
 
         # backward
         loss.backward()
         optimizer.step()
 
     scheduler.step()
-    print(f'\tTrain final loss:{loss.item():.5f}')
+    print(f'\tN_batch:{i_batch + 1}\tTrain final loss:{loss.item():.5f}\tTrain Accuracy:{total_acc / (i_batch + 1):.5f}')
     return total_loss_align / (i_batch+1), total_loss_pers / (i_batch+1)    # mean
 
 
 def eval_m2p2(m2p2_models, MODS, iterator, weight_mod):
     setModelMode(m2p2_models, is_train_mode=False)
     total_loss_align, total_loss_pers = 0, 0
+    total_acc = 0
 
     for i_batch, sample_batched in enumerate(iterator):
         # forward
         with torch.no_grad():
-            loss_align, loss_pers, loss = fit_m2p2(m2p2_models, MODS, sample_batched, weight_mod)
+            loss_align, loss_pers, loss, acc = fit_m2p2(m2p2_models, MODS, sample_batched, weight_mod)
             total_loss_align += loss_align.item()
             total_loss_pers += loss_pers.item()
+            total_acc += acc.item()
 
+    print(f'\tN_batch:{i_batch + 1}\tEval Accuracy:{total_acc / (i_batch + 1):.5f}')
     return total_loss_align / (i_batch+1), total_loss_pers / (i_batch+1)    # mean
 
 

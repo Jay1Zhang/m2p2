@@ -87,6 +87,15 @@ def loadModel(FOLD, model_dict):
     return model_dict, weight_mod
 
 
+def calcAccuracy(y_pred, y_true):
+    n = y_true.shape[0]
+    THRESHOLD = 0.10
+    threshold = torch.tensor([THRESHOLD for i in range(n)]).to(device)
+    diff = torch.abs(y_pred.squeeze() - y_true)
+    acc = torch.ge(threshold, diff).sum() / n
+    return acc
+
+
 def calcAlignLoss(s_emb_mod, MODS):
     criterion = nn.CosineEmbeddingLoss(reduction='mean')
     num = s_emb_mod[MODS[0]].shape[0]
