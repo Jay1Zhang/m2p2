@@ -181,7 +181,8 @@ class PersModel(nn.Module):
         super(PersModel, self).__init__()
 
         # input: heterogeneity emb (nmod * nfeat), alignment emb (nfeat), debate meta-data (1)
-        ninp = (nmod+1) * nfeat + 2
+        #ninp = (nmod+1) * nfeat + 2
+        ninp = nfeat + 2
         nout = 1
         self.fc1 = nn.Linear(ninp, 2 * nhid)
         self.fc2 = nn.Linear(2 * nhid, nhid)
@@ -190,7 +191,7 @@ class PersModel(nn.Module):
         self.sigm = nn.Sigmoid()
 
     def forward(self, align_emb, het_emb, meta_emb):
-        x = torch.cat([align_emb, het_emb, meta_emb], dim=1)
+        x = torch.cat([align_emb, meta_emb], dim=1)
         # x = torch.cat([het_emb, align_emb, meta_emb], dim=1)
         x = self.fc1(x)
         x = F.relu(self.dropout(x))

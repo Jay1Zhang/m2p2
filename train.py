@@ -38,10 +38,10 @@ def fit_m2p2(m2p2_models, MODS, sample_batched, weight_mod):
 
     s_emb_mod = m2p2_models['align'](latent_emb_mod)
     align_emb = gen_align_emb(s_emb_mod)
-    het_emb, het_emb_mod = gen_het_emb(latent_emb_mod, weight_mod, MODS)
+    # het_emb, het_emb_mod = gen_het_emb(latent_emb_mod, weight_mod, MODS)
     meta_emb = gen_meta_emb(sample_batched)
 
-    y_pred = m2p2_models['pers'](align_emb, het_emb, meta_emb)
+    y_pred = m2p2_models['pers'](align_emb, None, meta_emb)
     y_true = sample_batched['ed_vote'].float().to(device)
 
     # calc loss

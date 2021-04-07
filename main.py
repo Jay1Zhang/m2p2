@@ -83,16 +83,16 @@ if __name__ == '__main__':
         # bar_N = tqdm(range(N_EPOCHS), desc='master procedure')
         for epoch in range(N_EPOCHS):
             start_time = time.time()
-            #### Slave Procedure Start ####
-            # train ref model
-            bar_n = tqdm(range(n_EPOCHS), desc='slave procedure')
-            for slave_epoch in bar_n:
-                train_loss_ref = train_ref(m2p2_models, ref_model, MODS, tra_loader, ref_optim, ref_scheduler)
-
-            # eval ref model and update weight_mod
-            eval_loss_ref_mod = eval_ref(m2p2_models, ref_model, MODS, val_loader)
-            weight_mod = update_weight_mod(MODS, old_weight_mod=weight_mod, loss_ref_mod=eval_loss_ref_mod)
-            #### Slave Procedure End ####
+            # #### Slave Procedure Start ####
+            # # train ref model
+            # bar_n = tqdm(range(n_EPOCHS), desc='slave procedure')
+            # for slave_epoch in bar_n:
+            #     train_loss_ref = train_ref(m2p2_models, ref_model, MODS, tra_loader, ref_optim, ref_scheduler)
+            #
+            # # eval ref model and update weight_mod
+            # eval_loss_ref_mod = eval_ref(m2p2_models, ref_model, MODS, val_loader)
+            # weight_mod = update_weight_mod(MODS, old_weight_mod=weight_mod, loss_ref_mod=eval_loss_ref_mod)
+            # #### Slave Procedure End ####
 
             # train m2p2 model
             train_loss_align, train_loss_pers, train_acc = train_m2p2(m2p2_models, MODS, tra_loader, m2p2_optim, m2p2_scheduler, weight_mod)
