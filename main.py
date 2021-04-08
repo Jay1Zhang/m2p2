@@ -33,7 +33,7 @@ if __name__ == '__main__':
     TEST_MODE = args.test_mode
     VERBOSE = args.verbose
     #TEST_MODE = True
-    #VERBOSE = True
+    VERBOSE = True
 
     #############
 
@@ -64,6 +64,9 @@ if __name__ == '__main__':
     m2p2_models['pers'] = pers_model
 
     m2p2_params = get_hyper_params(m2p2_models)
+    weight_mod = {mod: torch.tensor(1. / len(MODS), requires_grad=True) for mod in MODS}
+    m2p2_params += list(weight_mod.values())
+
     m2p2_optim = optim.Adam(m2p2_params, lr=LR, weight_decay=W_DECAY)
     m2p2_scheduler = optim.lr_scheduler.StepLR(m2p2_optim, step_size=STEP_SIZE, gamma=SCHE_GAMMA)
 
@@ -74,7 +77,7 @@ if __name__ == '__main__':
             print(count_hyper_params(v.parameters()))
 
     # 3 - Initialize concat weights: w_a, w_v, w_l
-    weight_mod = {mod: 1. / len(MODS) for mod in MODS}
+    # weight_mod = {mod: 1. / len(MODS) for mod in MODS}
 
     # 4 - Train or Test
     if not TEST_MODE:
@@ -83,16 +86,16 @@ if __name__ == '__main__':
         # bar_N = tqdm(range(N_EPOCHS), desc='master procedure')
         for epoch in range(N_EPOCHS):
             start_time = time.time()
-            #### Slave Procedure Start ####
-            # train ref model
-            bar_n = tqdm(range(n_EPOCHS), desc='slave procedure')
-            for slave_epoch in bar_n:
-                train_loss_ref = train_ref(m2p2_models, ref_model, MODS, tra_loader, ref_optim, ref_scheduler)
-
-            # eval ref model and update weight_mod
-            eval_loss_ref_mod = eval_ref(m2p2_models, ref_model, MODS, val_loader)
-            weight_mod = update_weight_mod(MODS, old_weight_mod=weight_mod, loss_ref_mod=eval_loss_ref_mod)
-            #### Slave Procedure End ####
+            # #### Slave Procedure Start ####
+            # # train ref model
+            # bar_n = tqdm(range(n_EPOCHS), desc='slave procedure')
+            # for slave_epoch in bar_n:
+            #     train_loss_ref = train_ref(m2p2_models, ref_model, MODS, tra_loader, ref_optim, ref_scheduler)
+            #
+            # # eval ref model and update weight_mod
+            # eval_loss_ref_mod = eval_ref(m2p2_models, ref_model, MODS, val_loader)
+            # weight_mod = update_weight_mod(MODS, old_weight_mod=weight_mod, loss_ref_mod=eval_loss_ref_mod)
+            # #### Slave Procedure End ####
 
             # train m2p2 model
             train_loss_align, train_loss_pers, train_acc = train_m2p2(m2p2_models, MODS, tra_loader, m2p2_optim, m2p2_scheduler, weight_mod)

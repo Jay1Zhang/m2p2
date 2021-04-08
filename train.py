@@ -17,7 +17,7 @@ def gen_het_emb(latent_emb_mod, weight_mod, MODS):
     # generate H^het with H^latent_m, w_m
     het_emb_mod = {}
     for mod in MODS:
-        het_emb_mod[mod] = torch.tensor(weight_mod[mod]) * latent_emb_mod[mod]
+        het_emb_mod[mod] = weight_mod[mod] * latent_emb_mod[mod]
     # het_emb_mod = [torch.tensor(weight_mod[mod]) * latent_emb_mod[mod] for mod in MODS]
     het_emb = torch.cat([v for v in het_emb_mod.values()], dim=1)
     return het_emb, het_emb_mod
