@@ -1,0 +1,10 @@
+fold 2
+Let's use 10 GPUs!
+fold 1
+Let's use 10 GPUs!
+fold 2
+Let's use 10 GPUs!
+fold 1
+Let's use 10 GPUs!
+fold 0
+Let's use 10 GPUs!
