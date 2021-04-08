@@ -95,9 +95,9 @@ class LatentModel(nn.Module):
         super(LatentModel, self).__init__()
 
         # question: it means?
-        # answer:
-        nhead = 4       # head attention ???
-        nlayers = 1     # transformer encoder layers ???
+        # answer: 多头注意力机制，每个transformer有多少个encoder
+        nhead = 4       # multi-head attention
+        nlayers = 1     # transformer encoder layers
 
         if mod == 'a':
             self.feat_exa = InputEmb(73, nfeat, dropout)

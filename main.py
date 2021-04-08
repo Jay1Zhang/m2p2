@@ -17,7 +17,7 @@ if __name__ == '__main__':
     parser.add_argument('--fd', required=False, default=9, type=int, help='fold id')
     parser.add_argument('--mod', required=False, default='avl', type=str,
                         help='modalities: a,v,l, or any combination of them')
-    parser.add_argument('--dp', required=False, default=0.4, type=float, help='dropout')
+    parser.add_argument('--dp', required=False, default=0.2, type=float, help='dropout')
 
     ## boolean flags
     parser.add_argument('--test_mode', default=False, action='store_true',
