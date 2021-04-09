@@ -36,21 +36,22 @@ def fit_m2p2(m2p2_models, MODS, sample_batched, weight_mod):
         latent_emb_mod[mod] = m2p2_models[mod](sample_batched[f'{mod}_data'].to(device),
                                                sample_batched[f'{mod}_msk'].to(device))
 
-    s_emb_mod = m2p2_models['align'](latent_emb_mod)
-    align_emb = gen_align_emb(s_emb_mod)
+    # s_emb_mod = m2p2_models['align'](latent_emb_mod)
+    # align_emb = gen_align_emb(s_emb_mod)
     het_emb, het_emb_mod = gen_het_emb(latent_emb_mod, weight_mod, MODS)
     meta_emb = gen_meta_emb(sample_batched)
 
-    y_pred = m2p2_models['pers'](align_emb, het_emb, meta_emb)
+    y_pred = m2p2_models['pers'](None, het_emb, meta_emb)
     y_true = sample_batched['ed_vote'].float().to(device)
 
     # calc loss
-    loss_align = calcAlignLoss(s_emb_mod, MODS)
+    #loss_align = calcAlignLoss(s_emb_mod, MODS)
     loss_pers = calcPersLoss(y_pred, y_true)
-    loss = loss_pers + GAMMA * loss_align  # final loss, used to backward
+    loss = loss_pers
+    #loss = loss_pers + GAMMA * loss_align  # final loss, used to backward
     acc = calcAccuracy(y_pred, y_true)
 
-    return loss_align, loss_pers, loss, acc
+    return None, loss_pers, loss, acc
 
 
 def train_m2p2(m2p2_models, MODS, iterator, optimizer, scheduler, weight_mod):
@@ -62,7 +63,7 @@ def train_m2p2(m2p2_models, MODS, iterator, optimizer, scheduler, weight_mod):
         optimizer.zero_grad()
         # forward
         loss_align, loss_pers, loss, acc = fit_m2p2(m2p2_models, MODS, sample_batched, weight_mod)
-        total_loss_align += loss_align.item()
+        #total_loss_align += loss_align.item()
         total_loss_pers += loss_pers.item()
         total_acc += acc.item()
 
@@ -83,7 +84,7 @@ def eval_m2p2(m2p2_models, MODS, iterator, weight_mod):
         # forward
         with torch.no_grad():
             loss_align, loss_pers, loss, acc = fit_m2p2(m2p2_models, MODS, sample_batched, weight_mod)
-            total_loss_align += loss_align.item()
+            #total_loss_align += loss_align.item()
             total_loss_pers += loss_pers.item()
             total_acc += acc.item()
 
