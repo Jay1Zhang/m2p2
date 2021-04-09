@@ -1,0 +1,10 @@
+python main.py --test_mode --fd 0 >> log.txt
+python main.py --test_mode --fd 1 >> log.txt
+python main.py --test_mode --fd 2 >> log.txt
+python main.py --test_mode --fd 3 >> log.txt
+python main.py --test_mode --fd 4 >> log.txt
+python main.py --test_mode --fd 5 >> log.txt
+python main.py --test_mode --fd 6 >> log.txt
+python main.py --test_mode --fd 7 >> log.txt
+python main.py --test_mode --fd 8 >> log.txt
+python main.py --test_mode --fd 9 >> log.txt
