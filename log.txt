@@ -1,0 +1,1003 @@
+FOLD 0
+Let's use 10 GPUs!
+[SAVE MODEL] eval pers loss: 0.02535	mini pers loss: 100000.00000
+Epoch: 01/30 | Time: 2m 42s
+	Train alignment loss:1.35420	Train persuasion loss:0.02424	Train Accuracy:0.40096
+	Eval alignment loss:0.11305	Eval persuasion loss:0.02535	Eval Accuracy:0.51190
+Epoch: 02/30 | Time: 2m 40s
+	Train alignment loss:1.28290	Train persuasion loss:0.02377	Train Accuracy:0.42253
+	Eval alignment loss:0.06661	Eval persuasion loss:0.02567	Eval Accuracy:0.51190
+Epoch: 03/30 | Time: 2m 41s
+	Train alignment loss:1.26731	Train persuasion loss:0.02364	Train Accuracy:0.38649
+	Eval alignment loss:0.07744	Eval persuasion loss:0.02555	Eval Accuracy:0.51190
+[SAVE MODEL] eval pers loss: 0.02502	mini pers loss: 0.02535
+Epoch: 04/30 | Time: 2m 38s
+	Train alignment loss:1.24507	Train persuasion loss:0.02344	Train Accuracy:0.40378
+	Eval alignment loss:0.07424	Eval persuasion loss:0.02502	Eval Accuracy:0.51190
+Epoch: 05/30 | Time: 2m 35s
+	Train alignment loss:1.23576	Train persuasion loss:0.02372	Train Accuracy:0.40055
+	Eval alignment loss:0.07399	Eval persuasion loss:0.02592	Eval Accuracy:0.51190
+Epoch: 06/30 | Time: 2m 34s
+	Train alignment loss:1.27609	Train persuasion loss:0.02365	Train Accuracy:0.38664
+	Eval alignment loss:0.06062	Eval persuasion loss:0.02503	Eval Accuracy:0.51190
+[SAVE MODEL] eval pers loss: 0.02489	mini pers loss: 0.02502
+Epoch: 07/30 | Time: 2m 39s
+	Train alignment loss:1.27010	Train persuasion loss:0.02337	Train Accuracy:0.40696
+	Eval alignment loss:0.05224	Eval persuasion loss:0.02489	Eval Accuracy:0.51190
+Epoch: 08/30 | Time: 2m 27s
+	Train alignment loss:1.27000	Train persuasion loss:0.02341	Train Accuracy:0.41159
+	Eval alignment loss:0.06210	Eval persuasion loss:0.02513	Eval Accuracy:0.51190
+Epoch: 09/30 | Time: 2m 34s
+	Train alignment loss:1.28173	Train persuasion loss:0.02352	Train Accuracy:0.39597
+	Eval alignment loss:0.06880	Eval persuasion loss:0.02505	Eval Accuracy:0.51190
+Epoch: 10/30 | Time: 2m 33s
+	Train alignment loss:1.24363	Train persuasion loss:0.02363	Train Accuracy:0.39627
+	Eval alignment loss:0.10112	Eval persuasion loss:0.02499	Eval Accuracy:0.51190
+[SAVE MODEL] eval pers loss: 0.02431	mini pers loss: 0.02489
+Epoch: 11/30 | Time: 2m 38s
+	Train alignment loss:1.25025	Train persuasion loss:0.02324	Train Accuracy:0.42243
+	Eval alignment loss:0.08973	Eval persuasion loss:0.02431	Eval Accuracy:0.48065
+Epoch: 12/30 | Time: 2m 35s
+	Train alignment loss:1.25224	Train persuasion loss:0.02355	Train Accuracy:0.40973
+	Eval alignment loss:0.09913	Eval persuasion loss:0.02470	Eval Accuracy:0.51190
+Epoch: 13/30 | Time: 2m 38s
+	Train alignment loss:1.27574	Train persuasion loss:0.02316	Train Accuracy:0.39456
+	Eval alignment loss:0.07873	Eval persuasion loss:0.02481	Eval Accuracy:0.51190
+Epoch: 14/30 | Time: 2m 46s
+	Train alignment loss:1.27141	Train persuasion loss:0.02326	Train Accuracy:0.40685
+	Eval alignment loss:0.06399	Eval persuasion loss:0.02467	Eval Accuracy:0.51190
+Epoch: 15/30 | Time: 2m 44s
+	Train alignment loss:1.24766	Train persuasion loss:0.02331	Train Accuracy:0.40691
+	Eval alignment loss:0.05940	Eval persuasion loss:0.02486	Eval Accuracy:0.51190
+Epoch: 16/30 | Time: 2m 40s
+	Train alignment loss:1.27478	Train persuasion loss:0.02321	Train Accuracy:0.40212
+	Eval alignment loss:0.06691	Eval persuasion loss:0.02466	Eval Accuracy:0.51190
+Epoch: 17/30 | Time: 2m 38s
+	Train alignment loss:1.26876	Train persuasion loss:0.02319	Train Accuracy:0.40217
+	Eval alignment loss:0.05361	Eval persuasion loss:0.02469	Eval Accuracy:0.51190
+[SAVE MODEL] eval pers loss: 0.02409	mini pers loss: 0.02431
+Epoch: 18/30 | Time: 2m 37s
+	Train alignment loss:1.26363	Train persuasion loss:0.02326	Train Accuracy:0.41779
+	Eval alignment loss:0.04355	Eval persuasion loss:0.02409	Eval Accuracy:0.48065
+Epoch: 19/30 | Time: 2m 39s
+	Train alignment loss:1.23020	Train persuasion loss:0.02332	Train Accuracy:0.41159
+	Eval alignment loss:0.05206	Eval persuasion loss:0.02446	Eval Accuracy:0.51190
+Epoch: 20/30 | Time: 2m 39s
+	Train alignment loss:1.26452	Train persuasion loss:0.02315	Train Accuracy:0.41154
+	Eval alignment loss:0.05626	Eval persuasion loss:0.02472	Eval Accuracy:0.51190
+Epoch: 21/30 | Time: 2m 38s
+	Train alignment loss:1.22831	Train persuasion loss:0.02321	Train Accuracy:0.41638
+	Eval alignment loss:0.05300	Eval persuasion loss:0.02454	Eval Accuracy:0.51190
+Epoch: 22/30 | Time: 2m 42s
+	Train alignment loss:1.24031	Train persuasion loss:0.02305	Train Accuracy:0.42581
+	Eval alignment loss:0.04968	Eval persuasion loss:0.02466	Eval Accuracy:0.51190
+Epoch: 23/30 | Time: 2m 42s
+	Train alignment loss:1.24749	Train persuasion loss:0.02299	Train Accuracy:0.42072
+	Eval alignment loss:0.04315	Eval persuasion loss:0.02451	Eval Accuracy:0.51190
+Epoch: 24/30 | Time: 2m 36s
+	Train alignment loss:1.24328	Train persuasion loss:0.02327	Train Accuracy:0.40998
+	Eval alignment loss:0.04898	Eval persuasion loss:0.02444	Eval Accuracy:0.51190
+Epoch: 25/30 | Time: 2m 43s
+	Train alignment loss:1.23458	Train persuasion loss:0.02328	Train Accuracy:0.41497
+	Eval alignment loss:0.05260	Eval persuasion loss:0.02455	Eval Accuracy:0.51190
+Epoch: 26/30 | Time: 2m 40s
+	Train alignment loss:1.29446	Train persuasion loss:0.02314	Train Accuracy:0.42263
+	Eval alignment loss:0.05279	Eval persuasion loss:0.02434	Eval Accuracy:0.51190
+Epoch: 27/30 | Time: 2m 38s
+	Train alignment loss:1.27110	Train persuasion loss:0.02311	Train Accuracy:0.43639
+	Eval alignment loss:0.05092	Eval persuasion loss:0.02431	Eval Accuracy:0.48065
+Epoch: 28/30 | Time: 2m 37s
+	Train alignment loss:1.26751	Train persuasion loss:0.02312	Train Accuracy:0.42883
+	Eval alignment loss:0.05153	Eval persuasion loss:0.02423	Eval Accuracy:0.48065
+Epoch: 29/30 | Time: 2m 43s
+	Train alignment loss:1.25248	Train persuasion loss:0.02320	Train Accuracy:0.40660
+	Eval alignment loss:0.05391	Eval persuasion loss:0.02447	Eval Accuracy:0.51190
+Epoch: 30/30 | Time: 2m 26s
+	Train alignment loss:1.24162	Train persuasion loss:0.02292	Train Accuracy:0.41159
+	Eval alignment loss:0.04669	Eval persuasion loss:0.02430	Eval Accuracy:0.48065
+FOLD 0
+Let's use 10 GPUs!
+Test alignment loss:0.03715	Test persuasion loss:0.00992	Test Accuracy:0.79310
+MSE: 0.01
+FOLD 1
+Let's use 10 GPUs!
+[SAVE MODEL] eval pers loss: 0.02311	mini pers loss: 100000.00000
+Epoch: 01/30 | Time: 2m 22s
+	Train alignment loss:1.37179	Train persuasion loss:0.02497	Train Accuracy:0.38816
+	Eval alignment loss:0.13390	Eval persuasion loss:0.02311	Eval Accuracy:0.42188
+[SAVE MODEL] eval pers loss: 0.02297	mini pers loss: 0.02311
+Epoch: 02/30 | Time: 2m 27s
+	Train alignment loss:1.28735	Train persuasion loss:0.02419	Train Accuracy:0.40789
+	Eval alignment loss:0.10424	Eval persuasion loss:0.02297	Eval Accuracy:0.42188
+Epoch: 03/30 | Time: 2m 26s
+	Train alignment loss:1.25192	Train persuasion loss:0.02404	Train Accuracy:0.39638
+	Eval alignment loss:0.07968	Eval persuasion loss:0.02299	Eval Accuracy:0.42188
+[SAVE MODEL] eval pers loss: 0.02281	mini pers loss: 0.02297
+Epoch: 04/30 | Time: 2m 28s
+	Train alignment loss:1.31095	Train persuasion loss:0.02423	Train Accuracy:0.40789
+	Eval alignment loss:0.06840	Eval persuasion loss:0.02281	Eval Accuracy:0.42188
+Epoch: 05/30 | Time: 2m 25s
+	Train alignment loss:1.30709	Train persuasion loss:0.02424	Train Accuracy:0.38487
+	Eval alignment loss:0.06053	Eval persuasion loss:0.02305	Eval Accuracy:0.42188
+[SAVE MODEL] eval pers loss: 0.02281	mini pers loss: 0.02281
+Epoch: 06/30 | Time: 2m 21s
+	Train alignment loss:1.26609	Train persuasion loss:0.02427	Train Accuracy:0.40296
+	Eval alignment loss:0.06086	Eval persuasion loss:0.02281	Eval Accuracy:0.42188
+Epoch: 07/30 | Time: 2m 19s
+	Train alignment loss:1.28172	Train persuasion loss:0.02439	Train Accuracy:0.35526
+	Eval alignment loss:0.05893	Eval persuasion loss:0.02299	Eval Accuracy:0.42188
+[SAVE MODEL] eval pers loss: 0.02271	mini pers loss: 0.02281
+Epoch: 08/30 | Time: 2m 24s
+	Train alignment loss:1.29611	Train persuasion loss:0.02391	Train Accuracy:0.39145
+	Eval alignment loss:0.03210	Eval persuasion loss:0.02271	Eval Accuracy:0.42188
+[SAVE MODEL] eval pers loss: 0.02269	mini pers loss: 0.02271
+Epoch: 09/30 | Time: 2m 22s
+	Train alignment loss:1.28833	Train persuasion loss:0.02384	Train Accuracy:0.40789
+	Eval alignment loss:0.04163	Eval persuasion loss:0.02269	Eval Accuracy:0.42188
+[SAVE MODEL] eval pers loss: 0.02267	mini pers loss: 0.02269
+Epoch: 10/30 | Time: 2m 25s
+	Train alignment loss:1.25277	Train persuasion loss:0.02377	Train Accuracy:0.40789
+	Eval alignment loss:0.04621	Eval persuasion loss:0.02267	Eval Accuracy:0.42188
+Epoch: 11/30 | Time: 2m 17s
+	Train alignment loss:1.24823	Train persuasion loss:0.02408	Train Accuracy:0.40789
+	Eval alignment loss:0.04008	Eval persuasion loss:0.02276	Eval Accuracy:0.42188
+Epoch: 12/30 | Time: 2m 20s
+	Train alignment loss:1.27232	Train persuasion loss:0.02449	Train Accuracy:0.39309
+	Eval alignment loss:0.04359	Eval persuasion loss:0.02271	Eval Accuracy:0.42188
+Epoch: 13/30 | Time: 2m 11s
+	Train alignment loss:1.22094	Train persuasion loss:0.02391	Train Accuracy:0.38322
+	Eval alignment loss:0.03804	Eval persuasion loss:0.02271	Eval Accuracy:0.42188
+[SAVE MODEL] eval pers loss: 0.02257	mini pers loss: 0.02267
+Epoch: 14/30 | Time: 2m 27s
+	Train alignment loss:1.25908	Train persuasion loss:0.02394	Train Accuracy:0.39474
+	Eval alignment loss:0.03343	Eval persuasion loss:0.02257	Eval Accuracy:0.42188
+[SAVE MODEL] eval pers loss: 0.02254	mini pers loss: 0.02257
+Epoch: 15/30 | Time: 2m 34s
+	Train alignment loss:1.27075	Train persuasion loss:0.02426	Train Accuracy:0.38651
+	Eval alignment loss:0.03372	Eval persuasion loss:0.02254	Eval Accuracy:0.42188
+[SAVE MODEL] eval pers loss: 0.02241	mini pers loss: 0.02254
+Epoch: 16/30 | Time: 2m 32s
+	Train alignment loss:1.29219	Train persuasion loss:0.02361	Train Accuracy:0.41283
+	Eval alignment loss:0.03399	Eval persuasion loss:0.02241	Eval Accuracy:0.51562
+Epoch: 17/30 | Time: 2m 30s
+	Train alignment loss:1.26954	Train persuasion loss:0.02416	Train Accuracy:0.39474
+	Eval alignment loss:0.03860	Eval persuasion loss:0.02259	Eval Accuracy:0.42188
+Epoch: 18/30 | Time: 2m 15s
+	Train alignment loss:1.28508	Train persuasion loss:0.02372	Train Accuracy:0.40625
+	Eval alignment loss:0.04206	Eval persuasion loss:0.02261	Eval Accuracy:0.42188
+Epoch: 19/30 | Time: 2m 18s
+	Train alignment loss:1.26141	Train persuasion loss:0.02402	Train Accuracy:0.39803
+	Eval alignment loss:0.05127	Eval persuasion loss:0.02266	Eval Accuracy:0.42188
+Epoch: 20/30 | Time: 2m 17s
+	Train alignment loss:1.29897	Train persuasion loss:0.02399	Train Accuracy:0.38322
+	Eval alignment loss:0.04481	Eval persuasion loss:0.02260	Eval Accuracy:0.42188
+Epoch: 21/30 | Time: 2m 22s
+	Train alignment loss:1.30259	Train persuasion loss:0.02385	Train Accuracy:0.39967
+	Eval alignment loss:0.04223	Eval persuasion loss:0.02263	Eval Accuracy:0.42188
+Epoch: 22/30 | Time: 2m 27s
+	Train alignment loss:1.27052	Train persuasion loss:0.02373	Train Accuracy:0.40954
+	Eval alignment loss:0.04197	Eval persuasion loss:0.02262	Eval Accuracy:0.42188
+Epoch: 23/30 | Time: 2m 23s
+	Train alignment loss:1.27374	Train persuasion loss:0.02383	Train Accuracy:0.40296
+	Eval alignment loss:0.04286	Eval persuasion loss:0.02262	Eval Accuracy:0.42188
+Epoch: 24/30 | Time: 2m 26s
+	Train alignment loss:1.23644	Train persuasion loss:0.02362	Train Accuracy:0.39474
+	Eval alignment loss:0.03897	Eval persuasion loss:0.02256	Eval Accuracy:0.42188
+Epoch: 25/30 | Time: 2m 25s
+	Train alignment loss:1.23049	Train persuasion loss:0.02344	Train Accuracy:0.41447
+	Eval alignment loss:0.03610	Eval persuasion loss:0.02250	Eval Accuracy:0.42188
+Epoch: 26/30 | Time: 2m 16s
+	Train alignment loss:1.25823	Train persuasion loss:0.02374	Train Accuracy:0.41118
+	Eval alignment loss:0.03835	Eval persuasion loss:0.02255	Eval Accuracy:0.42188
+Epoch: 27/30 | Time: 2m 13s
+	Train alignment loss:1.25764	Train persuasion loss:0.02369	Train Accuracy:0.41283
+	Eval alignment loss:0.03892	Eval persuasion loss:0.02256	Eval Accuracy:0.42188
+Epoch: 28/30 | Time: 2m 26s
+	Train alignment loss:1.26026	Train persuasion loss:0.02394	Train Accuracy:0.40461
+	Eval alignment loss:0.03882	Eval persuasion loss:0.02247	Eval Accuracy:0.42188
+Epoch: 29/30 | Time: 2m 20s
+	Train alignment loss:1.23463	Train persuasion loss:0.02386	Train Accuracy:0.40954
+	Eval alignment loss:0.03669	Eval persuasion loss:0.02249	Eval Accuracy:0.42188
+Epoch: 30/30 | Time: 2m 12s
+	Train alignment loss:1.26261	Train persuasion loss:0.02370	Train Accuracy:0.41283
+	Eval alignment loss:0.03930	Eval persuasion loss:0.02244	Eval Accuracy:0.42188
+FOLD 1
+Let's use 10 GPUs!
+Test alignment loss:0.03183	Test persuasion loss:0.01667	Test Accuracy:0.46154
+MSE: 0.017
+FOLD 2
+Let's use 10 GPUs!
+[SAVE MODEL] eval pers loss: 0.02604	mini pers loss: 100000.00000
+Epoch: 01/30 | Time: 2m 13s
+	Train alignment loss:1.39194	Train persuasion loss:0.02382	Train Accuracy:0.39154
+	Eval alignment loss:0.13170	Eval persuasion loss:0.02604	Eval Accuracy:0.29167
+[SAVE MODEL] eval pers loss: 0.02558	mini pers loss: 0.02604
+Epoch: 02/30 | Time: 2m 10s
+	Train alignment loss:1.30348	Train persuasion loss:0.02316	Train Accuracy:0.37684
+	Eval alignment loss:0.10394	Eval persuasion loss:0.02558	Eval Accuracy:0.29167
+Epoch: 03/30 | Time: 2m 18s
+	Train alignment loss:1.26540	Train persuasion loss:0.02321	Train Accuracy:0.40257
+	Eval alignment loss:0.08135	Eval persuasion loss:0.02564	Eval Accuracy:0.29167
+Epoch: 04/30 | Time: 2m 14s
+	Train alignment loss:1.26362	Train persuasion loss:0.02285	Train Accuracy:0.38787
+	Eval alignment loss:0.07108	Eval persuasion loss:0.02568	Eval Accuracy:0.29167
+[SAVE MODEL] eval pers loss: 0.02530	mini pers loss: 0.02558
+Epoch: 05/30 | Time: 1m 33s
+	Train alignment loss:1.28187	Train persuasion loss:0.02270	Train Accuracy:0.39338
+	Eval alignment loss:0.07783	Eval persuasion loss:0.02530	Eval Accuracy:0.29167
+[SAVE MODEL] eval pers loss: 0.02514	mini pers loss: 0.02530
+Epoch: 06/30 | Time: 1m 33s
+	Train alignment loss:1.26238	Train persuasion loss:0.02273	Train Accuracy:0.40625
+	Eval alignment loss:0.07407	Eval persuasion loss:0.02514	Eval Accuracy:0.29167
+[SAVE MODEL] eval pers loss: 0.02508	mini pers loss: 0.02514
+Epoch: 07/30 | Time: 1m 38s
+	Train alignment loss:1.24172	Train persuasion loss:0.02285	Train Accuracy:0.39890
+	Eval alignment loss:0.07713	Eval persuasion loss:0.02508	Eval Accuracy:0.29167
+Epoch: 08/30 | Time: 1m 39s
+	Train alignment loss:1.24873	Train persuasion loss:0.02283	Train Accuracy:0.40257
+	Eval alignment loss:0.07515	Eval persuasion loss:0.02524	Eval Accuracy:0.29167
+Epoch: 09/30 | Time: 1m 37s
+	Train alignment loss:1.28362	Train persuasion loss:0.02278	Train Accuracy:0.41544
+	Eval alignment loss:0.08245	Eval persuasion loss:0.02531	Eval Accuracy:0.29167
+Epoch: 10/30 | Time: 1m 38s
+	Train alignment loss:1.25912	Train persuasion loss:0.02290	Train Accuracy:0.38787
+	Eval alignment loss:0.07220	Eval persuasion loss:0.02569	Eval Accuracy:0.29167
+Epoch: 11/30 | Time: 1m 37s
+	Train alignment loss:1.25396	Train persuasion loss:0.02267	Train Accuracy:0.41360
+	Eval alignment loss:0.06835	Eval persuasion loss:0.02554	Eval Accuracy:0.29167
+Epoch: 12/30 | Time: 1m 41s
+	Train alignment loss:1.28593	Train persuasion loss:0.02287	Train Accuracy:0.38971
+	Eval alignment loss:0.05782	Eval persuasion loss:0.02547	Eval Accuracy:0.29167
+Epoch: 13/30 | Time: 1m 39s
+	Train alignment loss:1.27683	Train persuasion loss:0.02276	Train Accuracy:0.39706
+	Eval alignment loss:0.05959	Eval persuasion loss:0.02530	Eval Accuracy:0.29167
+Epoch: 14/30 | Time: 1m 38s
+	Train alignment loss:1.27882	Train persuasion loss:0.02293	Train Accuracy:0.38787
+	Eval alignment loss:0.06175	Eval persuasion loss:0.02540	Eval Accuracy:0.29167
+Epoch: 15/30 | Time: 1m 40s
+	Train alignment loss:1.24418	Train persuasion loss:0.02283	Train Accuracy:0.40074
+	Eval alignment loss:0.05634	Eval persuasion loss:0.02545	Eval Accuracy:0.29167
+Epoch: 16/30 | Time: 1m 40s
+	Train alignment loss:1.23791	Train persuasion loss:0.02271	Train Accuracy:0.40441
+	Eval alignment loss:0.05336	Eval persuasion loss:0.02536	Eval Accuracy:0.29167
+Epoch: 17/30 | Time: 1m 44s
+	Train alignment loss:1.25290	Train persuasion loss:0.02265	Train Accuracy:0.40809
+	Eval alignment loss:0.04798	Eval persuasion loss:0.02526	Eval Accuracy:0.29167
+Epoch: 18/30 | Time: 1m 42s
+	Train alignment loss:1.25159	Train persuasion loss:0.02268	Train Accuracy:0.40993
+	Eval alignment loss:0.04342	Eval persuasion loss:0.02527	Eval Accuracy:0.29167
+Epoch: 19/30 | Time: 1m 41s
+	Train alignment loss:1.28189	Train persuasion loss:0.02294	Train Accuracy:0.41360
+	Eval alignment loss:0.05756	Eval persuasion loss:0.02532	Eval Accuracy:0.29167
+Epoch: 20/30 | Time: 1m 40s
+	Train alignment loss:1.25013	Train persuasion loss:0.02274	Train Accuracy:0.41360
+	Eval alignment loss:0.05828	Eval persuasion loss:0.02535	Eval Accuracy:0.29167
+Epoch: 21/30 | Time: 1m 40s
+	Train alignment loss:1.24486	Train persuasion loss:0.02258	Train Accuracy:0.40441
+	Eval alignment loss:0.06322	Eval persuasion loss:0.02533	Eval Accuracy:0.29167
+Epoch: 22/30 | Time: 1m 44s
+	Train alignment loss:1.26736	Train persuasion loss:0.02256	Train Accuracy:0.41544
+	Eval alignment loss:0.07789	Eval persuasion loss:0.02524	Eval Accuracy:0.29167
+Epoch: 23/30 | Time: 1m 39s
+	Train alignment loss:1.25653	Train persuasion loss:0.02286	Train Accuracy:0.41176
+	Eval alignment loss:0.05902	Eval persuasion loss:0.02522	Eval Accuracy:0.29167
+Epoch: 24/30 | Time: 1m 42s
+	Train alignment loss:1.25808	Train persuasion loss:0.02272	Train Accuracy:0.40625
+	Eval alignment loss:0.06518	Eval persuasion loss:0.02519	Eval Accuracy:0.29167
+Epoch: 25/30 | Time: 1m 39s
+	Train alignment loss:1.26533	Train persuasion loss:0.02283	Train Accuracy:0.42279
+	Eval alignment loss:0.06011	Eval persuasion loss:0.02519	Eval Accuracy:0.29167
+Epoch: 26/30 | Time: 1m 42s
+	Train alignment loss:1.29763	Train persuasion loss:0.02269	Train Accuracy:0.42096
+	Eval alignment loss:0.06236	Eval persuasion loss:0.02523	Eval Accuracy:0.29167
+Epoch: 27/30 | Time: 1m 45s
+	Train alignment loss:1.30068	Train persuasion loss:0.02287	Train Accuracy:0.40074
+	Eval alignment loss:0.05680	Eval persuasion loss:0.02524	Eval Accuracy:0.29167
+Epoch: 28/30 | Time: 1m 43s
+	Train alignment loss:1.28991	Train persuasion loss:0.02270	Train Accuracy:0.40993
+	Eval alignment loss:0.05873	Eval persuasion loss:0.02521	Eval Accuracy:0.29167
+Epoch: 29/30 | Time: 1m 43s
+	Train alignment loss:1.24500	Train persuasion loss:0.02276	Train Accuracy:0.42279
+	Eval alignment loss:0.06197	Eval persuasion loss:0.02523	Eval Accuracy:0.29167
+Epoch: 30/30 | Time: 1m 39s
+	Train alignment loss:1.20968	Train persuasion loss:0.02280	Train Accuracy:0.40809
+	Eval alignment loss:0.06394	Eval persuasion loss:0.02521	Eval Accuracy:0.29167
+FOLD 2
+Let's use 10 GPUs!
+Test alignment loss:0.07945	Test persuasion loss:0.03011	Test Accuracy:0.55556
+MSE: 0.03
+FOLD 3
+Let's use 10 GPUs!
+[SAVE MODEL] eval pers loss: 0.02921	mini pers loss: 100000.00000
+Epoch: 01/30 | Time: 1m 30s
+	Train alignment loss:1.40222	Train persuasion loss:0.02345	Train Accuracy:0.41016
+	Eval alignment loss:0.19832	Eval persuasion loss:0.02921	Eval Accuracy:0.24265
+[SAVE MODEL] eval pers loss: 0.02841	mini pers loss: 0.02921
+Epoch: 02/30 | Time: 1m 32s
+	Train alignment loss:1.32918	Train persuasion loss:0.02326	Train Accuracy:0.41484
+	Eval alignment loss:0.10260	Eval persuasion loss:0.02841	Eval Accuracy:0.27390
+Epoch: 03/30 | Time: 1m 30s
+	Train alignment loss:1.27215	Train persuasion loss:0.02415	Train Accuracy:0.40508
+	Eval alignment loss:0.06643	Eval persuasion loss:0.02901	Eval Accuracy:0.27390
+Epoch: 04/30 | Time: 1m 29s
+	Train alignment loss:1.28125	Train persuasion loss:0.02328	Train Accuracy:0.38984
+	Eval alignment loss:0.05075	Eval persuasion loss:0.02895	Eval Accuracy:0.27390
+[SAVE MODEL] eval pers loss: 0.02827	mini pers loss: 0.02841
+Epoch: 05/30 | Time: 1m 30s
+	Train alignment loss:1.27994	Train persuasion loss:0.02289	Train Accuracy:0.41758
+	Eval alignment loss:0.04984	Eval persuasion loss:0.02827	Eval Accuracy:0.27390
+[SAVE MODEL] eval pers loss: 0.02817	mini pers loss: 0.02827
+Epoch: 06/30 | Time: 1m 31s
+	Train alignment loss:1.23158	Train persuasion loss:0.02351	Train Accuracy:0.39922
+	Eval alignment loss:0.04445	Eval persuasion loss:0.02817	Eval Accuracy:0.24265
+[SAVE MODEL] eval pers loss: 0.02815	mini pers loss: 0.02817
+Epoch: 07/30 | Time: 1m 31s
+	Train alignment loss:1.26493	Train persuasion loss:0.02266	Train Accuracy:0.42813
+	Eval alignment loss:0.04412	Eval persuasion loss:0.02815	Eval Accuracy:0.24265
+Epoch: 08/30 | Time: 1m 28s
+	Train alignment loss:1.25317	Train persuasion loss:0.02322	Train Accuracy:0.38945
+	Eval alignment loss:0.04166	Eval persuasion loss:0.02892	Eval Accuracy:0.28952
+Epoch: 09/30 | Time: 1m 26s
+	Train alignment loss:1.24642	Train persuasion loss:0.02310	Train Accuracy:0.39414
+	Eval alignment loss:0.05809	Eval persuasion loss:0.02858	Eval Accuracy:0.28952
+[SAVE MODEL] eval pers loss: 0.02814	mini pers loss: 0.02815
+Epoch: 10/30 | Time: 1m 26s
+	Train alignment loss:1.28866	Train persuasion loss:0.02302	Train Accuracy:0.39531
+	Eval alignment loss:0.04417	Eval persuasion loss:0.02814	Eval Accuracy:0.25827
+[SAVE MODEL] eval pers loss: 0.02787	mini pers loss: 0.02814
+Epoch: 11/30 | Time: 1m 25s
+	Train alignment loss:1.28110	Train persuasion loss:0.02268	Train Accuracy:0.42773
+	Eval alignment loss:0.04916	Eval persuasion loss:0.02787	Eval Accuracy:0.32077
+Epoch: 12/30 | Time: 1m 27s
+	Train alignment loss:1.21660	Train persuasion loss:0.02334	Train Accuracy:0.38906
+	Eval alignment loss:0.04366	Eval persuasion loss:0.02816	Eval Accuracy:0.25827
+Epoch: 13/30 | Time: 1m 30s
+	Train alignment loss:1.24600	Train persuasion loss:0.02468	Train Accuracy:0.41133
+	Eval alignment loss:0.04793	Eval persuasion loss:0.02817	Eval Accuracy:0.25827
+Epoch: 14/30 | Time: 1m 29s
+	Train alignment loss:1.26040	Train persuasion loss:0.02334	Train Accuracy:0.40742
+	Eval alignment loss:0.04793	Eval persuasion loss:0.02834	Eval Accuracy:0.28952
+Epoch: 15/30 | Time: 1m 29s
+	Train alignment loss:1.28158	Train persuasion loss:0.02295	Train Accuracy:0.40391
+	Eval alignment loss:0.04161	Eval persuasion loss:0.02818	Eval Accuracy:0.25827
+Epoch: 16/30 | Time: 1m 31s
+	Train alignment loss:1.23138	Train persuasion loss:0.02326	Train Accuracy:0.40000
+	Eval alignment loss:0.04218	Eval persuasion loss:0.02809	Eval Accuracy:0.24265
+Epoch: 17/30 | Time: 1m 34s
+	Train alignment loss:1.24756	Train persuasion loss:0.02270	Train Accuracy:0.41367
+	Eval alignment loss:0.04650	Eval persuasion loss:0.02813	Eval Accuracy:0.24265
+Epoch: 18/30 | Time: 1m 32s
+	Train alignment loss:1.28818	Train persuasion loss:0.02265	Train Accuracy:0.41328
+	Eval alignment loss:0.04468	Eval persuasion loss:0.02803	Eval Accuracy:0.30515
+Epoch: 19/30 | Time: 1m 36s
+	Train alignment loss:1.26963	Train persuasion loss:0.02289	Train Accuracy:0.41992
+	Eval alignment loss:0.05057	Eval persuasion loss:0.02818	Eval Accuracy:0.24265
+Epoch: 20/30 | Time: 1m 32s
+	Train alignment loss:1.26129	Train persuasion loss:0.02342	Train Accuracy:0.39922
+	Eval alignment loss:0.04836	Eval persuasion loss:0.02822	Eval Accuracy:0.25827
+Epoch: 21/30 | Time: 1m 31s
+	Train alignment loss:1.27896	Train persuasion loss:0.02275	Train Accuracy:0.39531
+	Eval alignment loss:0.04631	Eval persuasion loss:0.02815	Eval Accuracy:0.27390
+Epoch: 22/30 | Time: 1m 32s
+	Train alignment loss:1.25518	Train persuasion loss:0.02254	Train Accuracy:0.41602
+	Eval alignment loss:0.04871	Eval persuasion loss:0.02791	Eval Accuracy:0.32077
+Epoch: 23/30 | Time: 1m 32s
+	Train alignment loss:1.27142	Train persuasion loss:0.02257	Train Accuracy:0.41016
+	Eval alignment loss:0.05563	Eval persuasion loss:0.02792	Eval Accuracy:0.32077
+Epoch: 24/30 | Time: 1m 34s
+	Train alignment loss:1.27710	Train persuasion loss:0.02268	Train Accuracy:0.42109
+	Eval alignment loss:0.05083	Eval persuasion loss:0.02794	Eval Accuracy:0.32077
+[SAVE MODEL] eval pers loss: 0.02785	mini pers loss: 0.02787
+Epoch: 25/30 | Time: 1m 32s
+	Train alignment loss:1.22188	Train persuasion loss:0.02263	Train Accuracy:0.41992
+	Eval alignment loss:0.05440	Eval persuasion loss:0.02785	Eval Accuracy:0.32077
+[SAVE MODEL] eval pers loss: 0.02783	mini pers loss: 0.02785
+Epoch: 26/30 | Time: 1m 32s
+	Train alignment loss:1.24242	Train persuasion loss:0.02250	Train Accuracy:0.42578
+	Eval alignment loss:0.06138	Eval persuasion loss:0.02783	Eval Accuracy:0.32077
+Epoch: 27/30 | Time: 1m 33s
+	Train alignment loss:1.24018	Train persuasion loss:0.02246	Train Accuracy:0.41875
+	Eval alignment loss:0.05732	Eval persuasion loss:0.02789	Eval Accuracy:0.32077
+Epoch: 28/30 | Time: 1m 32s
+	Train alignment loss:1.25848	Train persuasion loss:0.02275	Train Accuracy:0.41836
+	Eval alignment loss:0.05164	Eval persuasion loss:0.02790	Eval Accuracy:0.32077
+Epoch: 29/30 | Time: 1m 35s
+	Train alignment loss:1.22769	Train persuasion loss:0.02246	Train Accuracy:0.41992
+	Eval alignment loss:0.05187	Eval persuasion loss:0.02795	Eval Accuracy:0.32077
+Epoch: 30/30 | Time: 1m 36s
+	Train alignment loss:1.25670	Train persuasion loss:0.02309	Train Accuracy:0.40391
+	Eval alignment loss:0.06568	Eval persuasion loss:0.02795	Eval Accuracy:0.30515
+FOLD 3
+Let's use 10 GPUs!
+Test alignment loss:0.04882	Test persuasion loss:0.01622	Test Accuracy:0.38095
+MSE: 0.016
+FOLD 4
+Let's use 10 GPUs!
+[SAVE MODEL] eval pers loss: 0.01936	mini pers loss: 100000.00000
+Epoch: 01/30 | Time: 1m 30s
+	Train alignment loss:1.41536	Train persuasion loss:0.02317	Train Accuracy:0.43542
+	Eval alignment loss:0.10602	Eval persuasion loss:0.01936	Eval Accuracy:0.37500
+[SAVE MODEL] eval pers loss: 0.01923	mini pers loss: 0.01936
+Epoch: 02/30 | Time: 1m 30s
+	Train alignment loss:1.28443	Train persuasion loss:0.02347	Train Accuracy:0.43333
+	Eval alignment loss:0.08268	Eval persuasion loss:0.01923	Eval Accuracy:0.50938
+[SAVE MODEL] eval pers loss: 0.01923	mini pers loss: 0.01923
+Epoch: 03/30 | Time: 1m 29s
+	Train alignment loss:1.29506	Train persuasion loss:0.02335	Train Accuracy:0.43125
+	Eval alignment loss:0.07454	Eval persuasion loss:0.01923	Eval Accuracy:0.50938
+Epoch: 04/30 | Time: 1m 27s
+	Train alignment loss:1.27137	Train persuasion loss:0.02367	Train Accuracy:0.41250
+	Eval alignment loss:0.07991	Eval persuasion loss:0.01926	Eval Accuracy:0.49375
+Epoch: 05/30 | Time: 1m 34s
+	Train alignment loss:1.23848	Train persuasion loss:0.02299	Train Accuracy:0.40833
+	Eval alignment loss:0.07501	Eval persuasion loss:0.01930	Eval Accuracy:0.44375
+Epoch: 06/30 | Time: 1m 31s
+	Train alignment loss:1.24444	Train persuasion loss:0.02320	Train Accuracy:0.40208
+	Eval alignment loss:0.06645	Eval persuasion loss:0.01932	Eval Accuracy:0.50938
+Epoch: 07/30 | Time: 1m 29s
+	Train alignment loss:1.25186	Train persuasion loss:0.02327	Train Accuracy:0.40625
+	Eval alignment loss:0.06125	Eval persuasion loss:0.01938	Eval Accuracy:0.50938
+Epoch: 08/30 | Time: 1m 30s
+	Train alignment loss:1.26939	Train persuasion loss:0.02283	Train Accuracy:0.41458
+	Eval alignment loss:0.06698	Eval persuasion loss:0.01940	Eval Accuracy:0.45937
+Epoch: 09/30 | Time: 1m 27s
+	Train alignment loss:1.32627	Train persuasion loss:0.02225	Train Accuracy:0.43333
+	Eval alignment loss:0.07159	Eval persuasion loss:0.01935	Eval Accuracy:0.45937
+Epoch: 10/30 | Time: 1m 30s
+	Train alignment loss:1.27603	Train persuasion loss:0.02225	Train Accuracy:0.45208
+	Eval alignment loss:0.08128	Eval persuasion loss:0.01943	Eval Accuracy:0.37500
+Epoch: 11/30 | Time: 1m 28s
+	Train alignment loss:1.29097	Train persuasion loss:0.02372	Train Accuracy:0.42500
+	Eval alignment loss:0.07127	Eval persuasion loss:0.01945	Eval Accuracy:0.37500
+Epoch: 12/30 | Time: 1m 27s
+	Train alignment loss:1.28490	Train persuasion loss:0.02251	Train Accuracy:0.44583
+	Eval alignment loss:0.08416	Eval persuasion loss:0.01936	Eval Accuracy:0.45937
+Epoch: 13/30 | Time: 1m 27s
+	Train alignment loss:1.29370	Train persuasion loss:0.02253	Train Accuracy:0.44375
+	Eval alignment loss:0.06231	Eval persuasion loss:0.01933	Eval Accuracy:0.45937
+Epoch: 14/30 | Time: 1m 27s
+	Train alignment loss:1.28396	Train persuasion loss:0.02350	Train Accuracy:0.41667
+	Eval alignment loss:0.05085	Eval persuasion loss:0.01934	Eval Accuracy:0.45937
+Epoch: 15/30 | Time: 1m 27s
+	Train alignment loss:1.29369	Train persuasion loss:0.02277	Train Accuracy:0.42708
+	Eval alignment loss:0.05994	Eval persuasion loss:0.01932	Eval Accuracy:0.45937
+Epoch: 16/30 | Time: 1m 30s
+	Train alignment loss:1.26520	Train persuasion loss:0.02323	Train Accuracy:0.42083
+	Eval alignment loss:0.05385	Eval persuasion loss:0.01931	Eval Accuracy:0.45937
+Epoch: 17/30 | Time: 1m 27s
+	Train alignment loss:1.30459	Train persuasion loss:0.02251	Train Accuracy:0.45208
+	Eval alignment loss:0.06319	Eval persuasion loss:0.01939	Eval Accuracy:0.35938
+Epoch: 18/30 | Time: 1m 26s
+	Train alignment loss:1.27846	Train persuasion loss:0.02310	Train Accuracy:0.42292
+	Eval alignment loss:0.05246	Eval persuasion loss:0.01941	Eval Accuracy:0.39062
+Epoch: 19/30 | Time: 1m 24s
+	Train alignment loss:1.27522	Train persuasion loss:0.02242	Train Accuracy:0.44583
+	Eval alignment loss:0.07131	Eval persuasion loss:0.01940	Eval Accuracy:0.37500
+Epoch: 20/30 | Time: 1m 24s
+	Train alignment loss:1.25919	Train persuasion loss:0.02257	Train Accuracy:0.42500
+	Eval alignment loss:0.06263	Eval persuasion loss:0.01940	Eval Accuracy:0.39062
+Epoch: 21/30 | Time: 1m 24s
+	Train alignment loss:1.24608	Train persuasion loss:0.02462	Train Accuracy:0.41875
+	Eval alignment loss:0.06091	Eval persuasion loss:0.01941	Eval Accuracy:0.39062
+Epoch: 22/30 | Time: 1m 27s
+	Train alignment loss:1.28584	Train persuasion loss:0.02240	Train Accuracy:0.42917
+	Eval alignment loss:0.05433	Eval persuasion loss:0.01937	Eval Accuracy:0.42500
+Epoch: 23/30 | Time: 1m 25s
+	Train alignment loss:1.28675	Train persuasion loss:0.02518	Train Accuracy:0.40625
+	Eval alignment loss:0.06134	Eval persuasion loss:0.01939	Eval Accuracy:0.44063
+Epoch: 24/30 | Time: 1m 24s
+	Train alignment loss:1.25524	Train persuasion loss:0.02325	Train Accuracy:0.42083
+	Eval alignment loss:0.05899	Eval persuasion loss:0.01939	Eval Accuracy:0.44063
+Epoch: 25/30 | Time: 1m 24s
+	Train alignment loss:1.28384	Train persuasion loss:0.02253	Train Accuracy:0.42292
+	Eval alignment loss:0.05322	Eval persuasion loss:0.01942	Eval Accuracy:0.37500
+Epoch: 26/30 | Time: 1m 24s
+	Train alignment loss:1.26905	Train persuasion loss:0.02259	Train Accuracy:0.43333
+	Eval alignment loss:0.05449	Eval persuasion loss:0.01942	Eval Accuracy:0.37500
+Epoch: 27/30 | Time: 1m 23s
+	Train alignment loss:1.29059	Train persuasion loss:0.02289	Train Accuracy:0.43958
+	Eval alignment loss:0.05976	Eval persuasion loss:0.01944	Eval Accuracy:0.37500
+Epoch: 28/30 | Time: 1m 28s
+	Train alignment loss:1.25491	Train persuasion loss:0.02306	Train Accuracy:0.43125
+	Eval alignment loss:0.05498	Eval persuasion loss:0.01940	Eval Accuracy:0.37500
+Epoch: 29/30 | Time: 1m 25s
+	Train alignment loss:1.27826	Train persuasion loss:0.02244	Train Accuracy:0.43542
+	Eval alignment loss:0.05885	Eval persuasion loss:0.01946	Eval Accuracy:0.37500
+Epoch: 30/30 | Time: 1m 25s
+	Train alignment loss:1.28564	Train persuasion loss:0.02311	Train Accuracy:0.42500
+	Eval alignment loss:0.05695	Eval persuasion loss:0.01945	Eval Accuracy:0.37500
+FOLD 4
+Let's use 10 GPUs!
+Test alignment loss:0.05782	Test persuasion loss:0.03763	Test Accuracy:0.17391
+MSE: 0.038
+FOLD 5
+Let's use 10 GPUs!
+[SAVE MODEL] eval pers loss: 0.01924	mini pers loss: 100000.00000
+Epoch: 01/30 | Time: 1m 18s
+	Train alignment loss:1.41501	Train persuasion loss:0.02513	Train Accuracy:0.41189
+	Eval alignment loss:0.16707	Eval persuasion loss:0.01924	Eval Accuracy:0.20312
+[SAVE MODEL] eval pers loss: 0.01903	mini pers loss: 0.01924
+Epoch: 02/30 | Time: 1m 18s
+	Train alignment loss:1.28067	Train persuasion loss:0.02455	Train Accuracy:0.42175
+	Eval alignment loss:0.08636	Eval persuasion loss:0.01903	Eval Accuracy:0.20312
+Epoch: 03/30 | Time: 1m 18s
+	Train alignment loss:1.25580	Train persuasion loss:0.02444	Train Accuracy:0.42076
+	Eval alignment loss:0.06171	Eval persuasion loss:0.01954	Eval Accuracy:0.20312
+Epoch: 04/30 | Time: 1m 16s
+	Train alignment loss:1.31147	Train persuasion loss:0.02423	Train Accuracy:0.41620
+	Eval alignment loss:0.05121	Eval persuasion loss:0.01953	Eval Accuracy:0.20312
+Epoch: 05/30 | Time: 1m 16s
+	Train alignment loss:1.27237	Train persuasion loss:0.02419	Train Accuracy:0.40899
+	Eval alignment loss:0.04480	Eval persuasion loss:0.01933	Eval Accuracy:0.20312
+Epoch: 06/30 | Time: 1m 17s
+	Train alignment loss:1.26784	Train persuasion loss:0.02451	Train Accuracy:0.41620
+	Eval alignment loss:0.05936	Eval persuasion loss:0.01945	Eval Accuracy:0.20312
+Epoch: 07/30 | Time: 1m 17s
+	Train alignment loss:1.27655	Train persuasion loss:0.02410	Train Accuracy:0.41404
+	Eval alignment loss:0.07035	Eval persuasion loss:0.01945	Eval Accuracy:0.20312
+Epoch: 08/30 | Time: 1m 37s
+	Train alignment loss:1.28372	Train persuasion loss:0.02422	Train Accuracy:0.40418
+	Eval alignment loss:0.05996	Eval persuasion loss:0.01917	Eval Accuracy:0.20312
+Epoch: 09/30 | Time: 1m 46s
+	Train alignment loss:1.30567	Train persuasion loss:0.02421	Train Accuracy:0.40899
+	Eval alignment loss:0.06418	Eval persuasion loss:0.01905	Eval Accuracy:0.20312
+Epoch: 10/30 | Time: 1m 46s
+	Train alignment loss:1.29434	Train persuasion loss:0.02410	Train Accuracy:0.41114
+	Eval alignment loss:0.06193	Eval persuasion loss:0.01907	Eval Accuracy:0.20312
+Epoch: 11/30 | Time: 1m 43s
+	Train alignment loss:1.29250	Train persuasion loss:0.02418	Train Accuracy:0.40393
+	Eval alignment loss:0.05503	Eval persuasion loss:0.01905	Eval Accuracy:0.20312
+[SAVE MODEL] eval pers loss: 0.01890	mini pers loss: 0.01903
+Epoch: 12/30 | Time: 1m 48s
+	Train alignment loss:1.32051	Train persuasion loss:0.02409	Train Accuracy:0.41305
+	Eval alignment loss:0.04939	Eval persuasion loss:0.01890	Eval Accuracy:0.20312
+Epoch: 13/30 | Time: 1m 48s
+	Train alignment loss:1.25483	Train persuasion loss:0.02405	Train Accuracy:0.42797
+	Eval alignment loss:0.04988	Eval persuasion loss:0.01895	Eval Accuracy:0.20312
+Epoch: 14/30 | Time: 1m 49s
+	Train alignment loss:1.24894	Train persuasion loss:0.02412	Train Accuracy:0.42730
+	Eval alignment loss:0.05651	Eval persuasion loss:0.01895	Eval Accuracy:0.20312
+Epoch: 15/30 | Time: 1m 46s
+	Train alignment loss:1.29489	Train persuasion loss:0.02408	Train Accuracy:0.41860
+	Eval alignment loss:0.05775	Eval persuasion loss:0.01908	Eval Accuracy:0.20312
+Epoch: 16/30 | Time: 1m 46s
+	Train alignment loss:1.30991	Train persuasion loss:0.02402	Train Accuracy:0.42125
+	Eval alignment loss:0.05897	Eval persuasion loss:0.01904	Eval Accuracy:0.20312
+Epoch: 17/30 | Time: 1m 45s
+	Train alignment loss:1.25238	Train persuasion loss:0.02442	Train Accuracy:0.40824
+	Eval alignment loss:0.05353	Eval persuasion loss:0.01906	Eval Accuracy:0.20312
+Epoch: 18/30 | Time: 1m 48s
+	Train alignment loss:1.23037	Train persuasion loss:0.02405	Train Accuracy:0.41379
+	Eval alignment loss:0.04703	Eval persuasion loss:0.01909	Eval Accuracy:0.20312
+Epoch: 19/30 | Time: 1m 53s
+	Train alignment loss:1.24919	Train persuasion loss:0.02406	Train Accuracy:0.41479
+	Eval alignment loss:0.05307	Eval persuasion loss:0.01898	Eval Accuracy:0.20312
+Epoch: 20/30 | Time: 1m 49s
+	Train alignment loss:1.33191	Train persuasion loss:0.02391	Train Accuracy:0.42150
+	Eval alignment loss:0.05794	Eval persuasion loss:0.01900	Eval Accuracy:0.20312
+Epoch: 21/30 | Time: 1m 46s
+	Train alignment loss:1.27224	Train persuasion loss:0.02389	Train Accuracy:0.42341
+	Eval alignment loss:0.07842	Eval persuasion loss:0.01901	Eval Accuracy:0.20312
+Epoch: 22/30 | Time: 1m 46s
+	Train alignment loss:1.28153	Train persuasion loss:0.02385	Train Accuracy:0.42797
+	Eval alignment loss:0.06491	Eval persuasion loss:0.01899	Eval Accuracy:0.20312
+Epoch: 23/30 | Time: 1m 45s
+	Train alignment loss:1.27392	Train persuasion loss:0.02415	Train Accuracy:0.42366
+	Eval alignment loss:0.04928	Eval persuasion loss:0.01894	Eval Accuracy:0.20312
+Epoch: 24/30 | Time: 1m 49s
+	Train alignment loss:1.29839	Train persuasion loss:0.02398	Train Accuracy:0.43667
+	Eval alignment loss:0.05504	Eval persuasion loss:0.01896	Eval Accuracy:0.20312
+Epoch: 25/30 | Time: 1m 47s
+	Train alignment loss:1.26805	Train persuasion loss:0.02405	Train Accuracy:0.42946
+	Eval alignment loss:0.05320	Eval persuasion loss:0.01893	Eval Accuracy:0.20312
+Epoch: 26/30 | Time: 1m 47s
+	Train alignment loss:1.29026	Train persuasion loss:0.02411	Train Accuracy:0.40899
+	Eval alignment loss:0.05197	Eval persuasion loss:0.01898	Eval Accuracy:0.20312
+Epoch: 27/30 | Time: 1m 45s
+	Train alignment loss:1.25236	Train persuasion loss:0.02397	Train Accuracy:0.41305
+	Eval alignment loss:0.05222	Eval persuasion loss:0.01900	Eval Accuracy:0.20312
+Epoch: 28/30 | Time: 1m 44s
+	Train alignment loss:1.26732	Train persuasion loss:0.02400	Train Accuracy:0.42921
+	Eval alignment loss:0.05670	Eval persuasion loss:0.01900	Eval Accuracy:0.20312
+Epoch: 29/30 | Time: 1m 46s
+	Train alignment loss:1.29998	Train persuasion loss:0.02397	Train Accuracy:0.41504
+	Eval alignment loss:0.05167	Eval persuasion loss:0.01894	Eval Accuracy:0.20312
+Epoch: 30/30 | Time: 1m 32s
+	Train alignment loss:1.26448	Train persuasion loss:0.02409	Train Accuracy:0.42531
+	Eval alignment loss:0.04937	Eval persuasion loss:0.01893	Eval Accuracy:0.20312
+FOLD 5
+Let's use 10 GPUs!
+Test alignment loss:0.04516	Test persuasion loss:0.01923	Test Accuracy:0.42308
+MSE: 0.019
+FOLD 6
+Let's use 10 GPUs!
+[SAVE MODEL] eval pers loss: 0.02788	mini pers loss: 100000.00000
+Epoch: 01/30 | Time: 1m 21s
+	Train alignment loss:1.43161	Train persuasion loss:0.02482	Train Accuracy:0.43103
+	Eval alignment loss:0.09596	Eval persuasion loss:0.02788	Eval Accuracy:0.32812
+[SAVE MODEL] eval pers loss: 0.02752	mini pers loss: 0.02788
+Epoch: 02/30 | Time: 1m 13s
+	Train alignment loss:1.33139	Train persuasion loss:0.02545	Train Accuracy:0.43338
+	Eval alignment loss:0.08528	Eval persuasion loss:0.02752	Eval Accuracy:0.31250
+[SAVE MODEL] eval pers loss: 0.02735	mini pers loss: 0.02752
+Epoch: 03/30 | Time: 1m 25s
+	Train alignment loss:1.25813	Train persuasion loss:0.02506	Train Accuracy:0.44414
+	Eval alignment loss:0.07112	Eval persuasion loss:0.02735	Eval Accuracy:0.31250
+Epoch: 04/30 | Time: 1m 21s
+	Train alignment loss:1.24968	Train persuasion loss:0.02471	Train Accuracy:0.43338
+	Eval alignment loss:0.06832	Eval persuasion loss:0.02764	Eval Accuracy:0.31250
+Epoch: 05/30 | Time: 1m 23s
+	Train alignment loss:1.27483	Train persuasion loss:0.02470	Train Accuracy:0.41524
+	Eval alignment loss:0.08361	Eval persuasion loss:0.02771	Eval Accuracy:0.31250
+Epoch: 06/30 | Time: 1m 21s
+	Train alignment loss:1.24927	Train persuasion loss:0.02483	Train Accuracy:0.42045
+	Eval alignment loss:0.05711	Eval persuasion loss:0.02763	Eval Accuracy:0.31250
+Epoch: 07/30 | Time: 1m 7s
+	Train alignment loss:1.25847	Train persuasion loss:0.02472	Train Accuracy:0.41784
+	Eval alignment loss:0.05168	Eval persuasion loss:0.02770	Eval Accuracy:0.31250
+Epoch: 08/30 | Time: 1m 16s
+	Train alignment loss:1.27184	Train persuasion loss:0.02490	Train Accuracy:0.41490
+	Eval alignment loss:0.06228	Eval persuasion loss:0.02774	Eval Accuracy:0.32812
+Epoch: 09/30 | Time: 1m 27s
+	Train alignment loss:1.24785	Train persuasion loss:0.02475	Train Accuracy:0.40717
+	Eval alignment loss:0.05188	Eval persuasion loss:0.02752	Eval Accuracy:0.31250
+Epoch: 10/30 | Time: 1m 21s
+	Train alignment loss:1.21308	Train persuasion loss:0.02467	Train Accuracy:0.40953
+	Eval alignment loss:0.04774	Eval persuasion loss:0.02754	Eval Accuracy:0.31250
+Epoch: 11/30 | Time: 1m 20s
+	Train alignment loss:1.25469	Train persuasion loss:0.02477	Train Accuracy:0.42028
+	Eval alignment loss:0.05230	Eval persuasion loss:0.02750	Eval Accuracy:0.31250
+Epoch: 12/30 | Time: 1m 11s
+	Train alignment loss:1.27339	Train persuasion loss:0.02451	Train Accuracy:0.42314
+	Eval alignment loss:0.05867	Eval persuasion loss:0.02750	Eval Accuracy:0.31250
+Epoch: 13/30 | Time: 1m 10s
+	Train alignment loss:1.26995	Train persuasion loss:0.02460	Train Accuracy:0.41826
+	Eval alignment loss:0.05615	Eval persuasion loss:0.02756	Eval Accuracy:0.31250
+Epoch: 14/30 | Time: 1m 9s
+	Train alignment loss:1.24941	Train persuasion loss:0.02478	Train Accuracy:0.41515
+	Eval alignment loss:0.06162	Eval persuasion loss:0.02741	Eval Accuracy:0.31250
+Epoch: 15/30 | Time: 1m 9s
+	Train alignment loss:1.30136	Train persuasion loss:0.02451	Train Accuracy:0.41751
+	Eval alignment loss:0.05840	Eval persuasion loss:0.02747	Eval Accuracy:0.31250
+Epoch: 16/30 | Time: 1m 10s
+	Train alignment loss:1.27179	Train persuasion loss:0.02461	Train Accuracy:0.41499
+	Eval alignment loss:0.05497	Eval persuasion loss:0.02748	Eval Accuracy:0.31250
+Epoch: 17/30 | Time: 1m 10s
+	Train alignment loss:1.23523	Train persuasion loss:0.02461	Train Accuracy:0.40188
+	Eval alignment loss:0.05883	Eval persuasion loss:0.02747	Eval Accuracy:0.31250
+Epoch: 18/30 | Time: 1m 8s
+	Train alignment loss:1.27121	Train persuasion loss:0.02460	Train Accuracy:0.41784
+	Eval alignment loss:0.05487	Eval persuasion loss:0.02744	Eval Accuracy:0.31250
+Epoch: 19/30 | Time: 1m 17s
+	Train alignment loss:1.25622	Train persuasion loss:0.02460	Train Accuracy:0.41255
+	Eval alignment loss:0.05469	Eval persuasion loss:0.02749	Eval Accuracy:0.32812
+Epoch: 20/30 | Time: 1m 9s
+	Train alignment loss:1.28903	Train persuasion loss:0.02463	Train Accuracy:0.41994
+	Eval alignment loss:0.05980	Eval persuasion loss:0.02753	Eval Accuracy:0.32812
+Epoch: 21/30 | Time: 1m 6s
+	Train alignment loss:1.26720	Train persuasion loss:0.02462	Train Accuracy:0.42330
+	Eval alignment loss:0.06455	Eval persuasion loss:0.02751	Eval Accuracy:0.31250
+Epoch: 22/30 | Time: 1m 18s
+	Train alignment loss:1.26469	Train persuasion loss:0.02454	Train Accuracy:0.40969
+	Eval alignment loss:0.06183	Eval persuasion loss:0.02749	Eval Accuracy:0.31250
+Epoch: 23/30 | Time: 1m 12s
+	Train alignment loss:1.26226	Train persuasion loss:0.02467	Train Accuracy:0.41784
+	Eval alignment loss:0.05391	Eval persuasion loss:0.02749	Eval Accuracy:0.31250
+Epoch: 24/30 | Time: 1m 9s
+	Train alignment loss:1.24990	Train persuasion loss:0.02449	Train Accuracy:0.42356
+	Eval alignment loss:0.07747	Eval persuasion loss:0.02746	Eval Accuracy:0.31250
+Epoch: 25/30 | Time: 1m 11s
+	Train alignment loss:1.24758	Train persuasion loss:0.02463	Train Accuracy:0.42288
+	Eval alignment loss:0.06640	Eval persuasion loss:0.02747	Eval Accuracy:0.31250
+Epoch: 26/30 | Time: 1m 10s
+	Train alignment loss:1.23916	Train persuasion loss:0.02452	Train Accuracy:0.42826
+	Eval alignment loss:0.06024	Eval persuasion loss:0.02751	Eval Accuracy:0.31250
+Epoch: 27/30 | Time: 1m 11s
+	Train alignment loss:1.22481	Train persuasion loss:0.02473	Train Accuracy:0.42019
+	Eval alignment loss:0.07135	Eval persuasion loss:0.02749	Eval Accuracy:0.31250
+Epoch: 28/30 | Time: 1m 9s
+	Train alignment loss:1.30355	Train persuasion loss:0.02465	Train Accuracy:0.42280
+	Eval alignment loss:0.05601	Eval persuasion loss:0.02745	Eval Accuracy:0.31250
+Epoch: 29/30 | Time: 1m 11s
+	Train alignment loss:1.22304	Train persuasion loss:0.02458	Train Accuracy:0.41272
+	Eval alignment loss:0.06433	Eval persuasion loss:0.02746	Eval Accuracy:0.31250
+Epoch: 30/30 | Time: 1m 10s
+	Train alignment loss:1.24141	Train persuasion loss:0.02449	Train Accuracy:0.42818
+	Eval alignment loss:0.05504	Eval persuasion loss:0.02743	Eval Accuracy:0.31250
+FOLD 6
+Let's use 10 GPUs!
+Test alignment loss:0.06874	Test persuasion loss:0.02218	Test Accuracy:0.25000
+MSE: 0.022
+FOLD 7
+Let's use 10 GPUs!
+[SAVE MODEL] eval pers loss: 0.01798	mini pers loss: 100000.00000
+Epoch: 01/30 | Time: 1m 8s
+	Train alignment loss:1.34742	Train persuasion loss:0.02624	Train Accuracy:0.41824
+	Eval alignment loss:0.14900	Eval persuasion loss:0.01798	Eval Accuracy:0.37500
+[SAVE MODEL] eval pers loss: 0.01721	mini pers loss: 0.01798
+Epoch: 02/30 | Time: 1m 13s
+	Train alignment loss:1.32427	Train persuasion loss:0.02604	Train Accuracy:0.42677
+	Eval alignment loss:0.15321	Eval persuasion loss:0.01721	Eval Accuracy:0.37500
+Epoch: 03/30 | Time: 1m 7s
+	Train alignment loss:1.31105	Train persuasion loss:0.02577	Train Accuracy:0.41383
+	Eval alignment loss:0.12252	Eval persuasion loss:0.01768	Eval Accuracy:0.37500
+Epoch: 04/30 | Time: 1m 7s
+	Train alignment loss:1.29343	Train persuasion loss:0.02602	Train Accuracy:0.40688
+	Eval alignment loss:0.11743	Eval persuasion loss:0.01814	Eval Accuracy:0.37500
+Epoch: 05/30 | Time: 1m 7s
+	Train alignment loss:1.27215	Train persuasion loss:0.02547	Train Accuracy:0.41204
+	Eval alignment loss:0.10750	Eval persuasion loss:0.01781	Eval Accuracy:0.37500
+Epoch: 06/30 | Time: 1m 7s
+	Train alignment loss:1.25719	Train persuasion loss:0.02601	Train Accuracy:0.40636
+	Eval alignment loss:0.08700	Eval persuasion loss:0.01785	Eval Accuracy:0.37500
+Epoch: 07/30 | Time: 1m 9s
+	Train alignment loss:1.24769	Train persuasion loss:0.02567	Train Accuracy:0.40583
+	Eval alignment loss:0.09542	Eval persuasion loss:0.01789	Eval Accuracy:0.37500
+Epoch: 08/30 | Time: 1m 9s
+	Train alignment loss:1.24787	Train persuasion loss:0.02528	Train Accuracy:0.42393
+	Eval alignment loss:0.07753	Eval persuasion loss:0.01795	Eval Accuracy:0.37500
+Epoch: 09/30 | Time: 1m 10s
+	Train alignment loss:1.25047	Train persuasion loss:0.02545	Train Accuracy:0.40530
+	Eval alignment loss:0.07281	Eval persuasion loss:0.01776	Eval Accuracy:0.37500
+Epoch: 10/30 | Time: 1m 9s
+	Train alignment loss:1.30101	Train persuasion loss:0.02549	Train Accuracy:0.40920
+	Eval alignment loss:0.07037	Eval persuasion loss:0.01791	Eval Accuracy:0.37500
+Epoch: 11/30 | Time: 1m 6s
+	Train alignment loss:1.24652	Train persuasion loss:0.02554	Train Accuracy:0.40088
+	Eval alignment loss:0.06658	Eval persuasion loss:0.01782	Eval Accuracy:0.37500
+Epoch: 12/30 | Time: 1m 14s
+	Train alignment loss:1.26616	Train persuasion loss:0.02548	Train Accuracy:0.40246
+	Eval alignment loss:0.06862	Eval persuasion loss:0.01772	Eval Accuracy:0.37500
+Epoch: 13/30 | Time: 1m 8s
+	Train alignment loss:1.25045	Train persuasion loss:0.02516	Train Accuracy:0.41824
+	Eval alignment loss:0.06711	Eval persuasion loss:0.01761	Eval Accuracy:0.37500
+Epoch: 14/30 | Time: 1m 8s
+	Train alignment loss:1.25265	Train persuasion loss:0.02539	Train Accuracy:0.41204
+	Eval alignment loss:0.07121	Eval persuasion loss:0.01754	Eval Accuracy:0.37500
+Epoch: 15/30 | Time: 1m 8s
+	Train alignment loss:1.27341	Train persuasion loss:0.02561	Train Accuracy:0.40246
+	Eval alignment loss:0.08101	Eval persuasion loss:0.01741	Eval Accuracy:0.37500
+Epoch: 16/30 | Time: 1m 9s
+	Train alignment loss:1.26558	Train persuasion loss:0.02533	Train Accuracy:0.40299
+	Eval alignment loss:0.07746	Eval persuasion loss:0.01741	Eval Accuracy:0.37500
+Epoch: 17/30 | Time: 1m 7s
+	Train alignment loss:1.30688	Train persuasion loss:0.02544	Train Accuracy:0.40015
+	Eval alignment loss:0.07710	Eval persuasion loss:0.01743	Eval Accuracy:0.37500
+Epoch: 18/30 | Time: 1m 9s
+	Train alignment loss:1.26266	Train persuasion loss:0.02550	Train Accuracy:0.40351
+	Eval alignment loss:0.07001	Eval persuasion loss:0.01753	Eval Accuracy:0.37500
+Epoch: 19/30 | Time: 1m 8s
+	Train alignment loss:1.25126	Train persuasion loss:0.02536	Train Accuracy:0.40920
+	Eval alignment loss:0.07491	Eval persuasion loss:0.01767	Eval Accuracy:0.37500
+Epoch: 20/30 | Time: 1m 8s
+	Train alignment loss:1.25946	Train persuasion loss:0.02540	Train Accuracy:0.40457
+	Eval alignment loss:0.07500	Eval persuasion loss:0.01772	Eval Accuracy:0.37500
+Epoch: 21/30 | Time: 1m 6s
+	Train alignment loss:1.27720	Train persuasion loss:0.02538	Train Accuracy:0.39962
+	Eval alignment loss:0.08521	Eval persuasion loss:0.01770	Eval Accuracy:0.37500
+Epoch: 22/30 | Time: 1m 14s
+	Train alignment loss:1.28610	Train persuasion loss:0.02526	Train Accuracy:0.41077
+	Eval alignment loss:0.07515	Eval persuasion loss:0.01767	Eval Accuracy:0.37500
+Epoch: 23/30 | Time: 1m 10s
+	Train alignment loss:1.25824	Train persuasion loss:0.02543	Train Accuracy:0.40636
+	Eval alignment loss:0.07510	Eval persuasion loss:0.01761	Eval Accuracy:0.37500
+Epoch: 24/30 | Time: 1m 10s
+	Train alignment loss:1.29320	Train persuasion loss:0.02515	Train Accuracy:0.40351
+	Eval alignment loss:0.08368	Eval persuasion loss:0.01767	Eval Accuracy:0.37500
+Epoch: 25/30 | Time: 1m 10s
+	Train alignment loss:1.26729	Train persuasion loss:0.02549	Train Accuracy:0.40814
+	Eval alignment loss:0.07903	Eval persuasion loss:0.01765	Eval Accuracy:0.37500
+Epoch: 26/30 | Time: 1m 10s
+	Train alignment loss:1.26709	Train persuasion loss:0.02528	Train Accuracy:0.40351
+	Eval alignment loss:0.07586	Eval persuasion loss:0.01764	Eval Accuracy:0.37500
+Epoch: 27/30 | Time: 1m 11s
+	Train alignment loss:1.26929	Train persuasion loss:0.02530	Train Accuracy:0.40667
+	Eval alignment loss:0.08133	Eval persuasion loss:0.01761	Eval Accuracy:0.37500
+Epoch: 28/30 | Time: 1m 10s
+	Train alignment loss:1.24897	Train persuasion loss:0.02535	Train Accuracy:0.40562
+	Eval alignment loss:0.07310	Eval persuasion loss:0.01758	Eval Accuracy:0.37500
+Epoch: 29/30 | Time: 1m 10s
+	Train alignment loss:1.24980	Train persuasion loss:0.02547	Train Accuracy:0.39962
+	Eval alignment loss:0.08276	Eval persuasion loss:0.01755	Eval Accuracy:0.37500
+Epoch: 30/30 | Time: 1m 10s
+	Train alignment loss:1.31880	Train persuasion loss:0.02538	Train Accuracy:0.40351
+	Eval alignment loss:0.08938	Eval persuasion loss:0.01748	Eval Accuracy:0.37500
+FOLD 7
+Let's use 10 GPUs!
+Test alignment loss:0.16013	Test persuasion loss:0.01761	Test Accuracy:0.42857
+MSE: 0.018
+FOLD 8
+Let's use 10 GPUs!
+[SAVE MODEL] eval pers loss: 0.01991	mini pers loss: 100000.00000
+Epoch: 01/30 | Time: 1m 5s
+	Train alignment loss:1.40486	Train persuasion loss:0.02545	Train Accuracy:0.46195
+	Eval alignment loss:0.22742	Eval persuasion loss:0.01991	Eval Accuracy:0.27188
+Epoch: 02/30 | Time: 1m 12s
+	Train alignment loss:1.30766	Train persuasion loss:0.02553	Train Accuracy:0.45570
+	Eval alignment loss:0.10199	Eval persuasion loss:0.02042	Eval Accuracy:0.27188
+Epoch: 03/30 | Time: 1m 8s
+	Train alignment loss:1.24997	Train persuasion loss:0.02493	Train Accuracy:0.44191
+	Eval alignment loss:0.07913	Eval persuasion loss:0.02024	Eval Accuracy:0.27188
+Epoch: 04/30 | Time: 1m 5s
+	Train alignment loss:1.29404	Train persuasion loss:0.02486	Train Accuracy:0.45221
+	Eval alignment loss:0.11272	Eval persuasion loss:0.02024	Eval Accuracy:0.27188
+Epoch: 05/30 | Time: 1m 8s
+	Train alignment loss:1.31193	Train persuasion loss:0.02507	Train Accuracy:0.44154
+	Eval alignment loss:0.07689	Eval persuasion loss:0.02014	Eval Accuracy:0.27188
+Epoch: 06/30 | Time: 1m 8s
+	Train alignment loss:1.28359	Train persuasion loss:0.02451	Train Accuracy:0.45607
+	Eval alignment loss:0.08105	Eval persuasion loss:0.02006	Eval Accuracy:0.27188
+Epoch: 07/30 | Time: 1m 6s
+	Train alignment loss:1.25972	Train persuasion loss:0.02562	Train Accuracy:0.44191
+	Eval alignment loss:0.05783	Eval persuasion loss:0.02003	Eval Accuracy:0.27188
+Epoch: 08/30 | Time: 1m 8s
+	Train alignment loss:1.24095	Train persuasion loss:0.02451	Train Accuracy:0.48033
+	Eval alignment loss:0.04654	Eval persuasion loss:0.02011	Eval Accuracy:0.27188
+Epoch: 09/30 | Time: 1m 7s
+	Train alignment loss:1.30457	Train persuasion loss:0.02483	Train Accuracy:0.46581
+	Eval alignment loss:0.04770	Eval persuasion loss:0.02010	Eval Accuracy:0.27188
+Epoch: 10/30 | Time: 1m 9s
+	Train alignment loss:1.26861	Train persuasion loss:0.02489	Train Accuracy:0.44081
+	Eval alignment loss:0.04625	Eval persuasion loss:0.02017	Eval Accuracy:0.27188
+Epoch: 11/30 | Time: 1m 6s
+	Train alignment loss:1.29717	Train persuasion loss:0.02524	Train Accuracy:0.44743
+	Eval alignment loss:0.03745	Eval persuasion loss:0.02019	Eval Accuracy:0.27188
+Epoch: 12/30 | Time: 1m 14s
+	Train alignment loss:1.28841	Train persuasion loss:0.02489	Train Accuracy:0.44779
+	Eval alignment loss:0.04018	Eval persuasion loss:0.02025	Eval Accuracy:0.27188
+Epoch: 13/30 | Time: 1m 8s
+	Train alignment loss:1.29180	Train persuasion loss:0.02503	Train Accuracy:0.43180
+	Eval alignment loss:0.03596	Eval persuasion loss:0.02022	Eval Accuracy:0.27188
+Epoch: 14/30 | Time: 1m 8s
+	Train alignment loss:1.29937	Train persuasion loss:0.02495	Train Accuracy:0.45846
+	Eval alignment loss:0.03805	Eval persuasion loss:0.02022	Eval Accuracy:0.27188
+Epoch: 15/30 | Time: 1m 7s
+	Train alignment loss:1.30530	Train persuasion loss:0.02535	Train Accuracy:0.44706
+	Eval alignment loss:0.03544	Eval persuasion loss:0.02029	Eval Accuracy:0.27188
+Epoch: 16/30 | Time: 1m 8s
+	Train alignment loss:1.23350	Train persuasion loss:0.02457	Train Accuracy:0.45533
+	Eval alignment loss:0.04093	Eval persuasion loss:0.02022	Eval Accuracy:0.27188
+Epoch: 17/30 | Time: 1m 9s
+	Train alignment loss:1.28728	Train persuasion loss:0.02520	Train Accuracy:0.45018
+	Eval alignment loss:0.04289	Eval persuasion loss:0.02017	Eval Accuracy:0.27188
+Epoch: 18/30 | Time: 1m 9s
+	Train alignment loss:1.29408	Train persuasion loss:0.02487	Train Accuracy:0.44081
+	Eval alignment loss:0.04828	Eval persuasion loss:0.02011	Eval Accuracy:0.27188
+Epoch: 19/30 | Time: 1m 9s
+	Train alignment loss:1.26566	Train persuasion loss:0.02446	Train Accuracy:0.45294
+	Eval alignment loss:0.04376	Eval persuasion loss:0.02016	Eval Accuracy:0.27188
+Epoch: 20/30 | Time: 1m 10s
+	Train alignment loss:1.24903	Train persuasion loss:0.02439	Train Accuracy:0.45570
+	Eval alignment loss:0.03988	Eval persuasion loss:0.02021	Eval Accuracy:0.27188
+Epoch: 21/30 | Time: 1m 9s
+	Train alignment loss:1.21035	Train persuasion loss:0.02470	Train Accuracy:0.45919
+	Eval alignment loss:0.04298	Eval persuasion loss:0.02019	Eval Accuracy:0.27188
+Epoch: 22/30 | Time: 1m 8s
+	Train alignment loss:1.27144	Train persuasion loss:0.02568	Train Accuracy:0.42978
+	Eval alignment loss:0.04644	Eval persuasion loss:0.02020	Eval Accuracy:0.27188
+Epoch: 23/30 | Time: 1m 13s
+	Train alignment loss:1.36139	Train persuasion loss:0.02524	Train Accuracy:0.44430
+	Eval alignment loss:0.04819	Eval persuasion loss:0.02022	Eval Accuracy:0.27188
+Epoch: 24/30 | Time: 1m 9s
+	Train alignment loss:1.30150	Train persuasion loss:0.02494	Train Accuracy:0.45368
+	Eval alignment loss:0.04688	Eval persuasion loss:0.02023	Eval Accuracy:0.27188
+Epoch: 25/30 | Time: 1m 8s
+	Train alignment loss:1.29444	Train persuasion loss:0.02532	Train Accuracy:0.45643
+	Eval alignment loss:0.05053	Eval persuasion loss:0.02024	Eval Accuracy:0.27188
+Epoch: 26/30 | Time: 1m 8s
+	Train alignment loss:1.30088	Train persuasion loss:0.02422	Train Accuracy:0.46434
+	Eval alignment loss:0.04716	Eval persuasion loss:0.02033	Eval Accuracy:0.27188
+Epoch: 27/30 | Time: 1m 8s
+	Train alignment loss:1.25246	Train persuasion loss:0.02531	Train Accuracy:0.44467
+	Eval alignment loss:0.04673	Eval persuasion loss:0.02033	Eval Accuracy:0.27188
+Epoch: 28/30 | Time: 1m 9s
+	Train alignment loss:1.30766	Train persuasion loss:0.02458	Train Accuracy:0.46783
+	Eval alignment loss:0.04459	Eval persuasion loss:0.02031	Eval Accuracy:0.27188
+Epoch: 29/30 | Time: 1m 9s
+	Train alignment loss:1.24011	Train persuasion loss:0.02526	Train Accuracy:0.43566
+	Eval alignment loss:0.05008	Eval persuasion loss:0.02027	Eval Accuracy:0.27188
+Epoch: 30/30 | Time: 1m 8s
+	Train alignment loss:1.30074	Train persuasion loss:0.02411	Train Accuracy:0.44320
+	Eval alignment loss:0.04921	Eval persuasion loss:0.02029	Eval Accuracy:0.27188
+FOLD 8
+Let's use 10 GPUs!
+Test alignment loss:0.22213	Test persuasion loss:0.01657	Test Accuracy:0.40000
+MSE: 0.017
+FOLD 9
+Let's use 10 GPUs!
+[SAVE MODEL] eval pers loss: 0.02410	mini pers loss: 100000.00000
+Epoch: 01/30 | Time: 1m 2s
+	Train alignment loss:1.34597	Train persuasion loss:0.02135	Train Accuracy:0.48138
+	Eval alignment loss:0.17313	Eval persuasion loss:0.02410	Eval Accuracy:0.59375
+Epoch: 02/30 | Time: 0m 58s
+	Train alignment loss:1.35746	Train persuasion loss:0.02079	Train Accuracy:0.47443
+	Eval alignment loss:0.21628	Eval persuasion loss:0.02438	Eval Accuracy:0.59375
+Epoch: 03/30 | Time: 1m 8s
+	Train alignment loss:1.29953	Train persuasion loss:0.02053	Train Accuracy:0.47759
+	Eval alignment loss:0.18103	Eval persuasion loss:0.02445	Eval Accuracy:0.59375
+Epoch: 04/30 | Time: 1m 3s
+	Train alignment loss:1.28637	Train persuasion loss:0.02058	Train Accuracy:0.48548
+	Eval alignment loss:0.08306	Eval persuasion loss:0.02444	Eval Accuracy:0.59375
+Epoch: 05/30 | Time: 1m 1s
+	Train alignment loss:1.29377	Train persuasion loss:0.02080	Train Accuracy:0.47727
+	Eval alignment loss:0.05539	Eval persuasion loss:0.02441	Eval Accuracy:0.59375
+Epoch: 06/30 | Time: 1m 0s
+	Train alignment loss:1.27270	Train persuasion loss:0.02086	Train Accuracy:0.45676
+	Eval alignment loss:0.05364	Eval persuasion loss:0.02420	Eval Accuracy:0.59375
+[SAVE MODEL] eval pers loss: 0.02400	mini pers loss: 0.02410
+Epoch: 07/30 | Time: 1m 0s
+	Train alignment loss:1.29081	Train persuasion loss:0.02079	Train Accuracy:0.46054
+	Eval alignment loss:0.08736	Eval persuasion loss:0.02400	Eval Accuracy:0.59375
+Epoch: 08/30 | Time: 0m 59s
+	Train alignment loss:1.28156	Train persuasion loss:0.02031	Train Accuracy:0.47254
+	Eval alignment loss:0.05940	Eval persuasion loss:0.02419	Eval Accuracy:0.59375
+Epoch: 09/30 | Time: 1m 0s
+	Train alignment loss:1.25902	Train persuasion loss:0.02032	Train Accuracy:0.46212
+	Eval alignment loss:0.07105	Eval persuasion loss:0.02409	Eval Accuracy:0.59375
+Epoch: 10/30 | Time: 1m 0s
+	Train alignment loss:1.28266	Train persuasion loss:0.02046	Train Accuracy:0.46212
+	Eval alignment loss:0.05592	Eval persuasion loss:0.02425	Eval Accuracy:0.59375
+Epoch: 11/30 | Time: 0m 58s
+	Train alignment loss:1.25058	Train persuasion loss:0.02032	Train Accuracy:0.48232
+	Eval alignment loss:0.05758	Eval persuasion loss:0.02425	Eval Accuracy:0.59375
+Epoch: 12/30 | Time: 0m 59s
+	Train alignment loss:1.27814	Train persuasion loss:0.02060	Train Accuracy:0.46591
+	Eval alignment loss:0.05980	Eval persuasion loss:0.02433	Eval Accuracy:0.59375
+Epoch: 13/30 | Time: 1m 0s
+	Train alignment loss:1.22766	Train persuasion loss:0.02055	Train Accuracy:0.47475
+	Eval alignment loss:0.08841	Eval persuasion loss:0.02421	Eval Accuracy:0.59375
+Epoch: 14/30 | Time: 1m 3s
+	Train alignment loss:1.22666	Train persuasion loss:0.02058	Train Accuracy:0.46559
+	Eval alignment loss:0.06204	Eval persuasion loss:0.02426	Eval Accuracy:0.59375
+Epoch: 15/30 | Time: 1m 6s
+	Train alignment loss:1.24257	Train persuasion loss:0.02009	Train Accuracy:0.46023
+	Eval alignment loss:0.04972	Eval persuasion loss:0.02425	Eval Accuracy:0.59375
+Epoch: 16/30 | Time: 1m 0s
+	Train alignment loss:1.23925	Train persuasion loss:0.02034	Train Accuracy:0.46338
+	Eval alignment loss:0.05780	Eval persuasion loss:0.02429	Eval Accuracy:0.59375
+Epoch: 17/30 | Time: 1m 3s
+	Train alignment loss:1.28700	Train persuasion loss:0.02021	Train Accuracy:0.47254
+	Eval alignment loss:0.06867	Eval persuasion loss:0.02430	Eval Accuracy:0.59375
+Epoch: 18/30 | Time: 1m 7s
+	Train alignment loss:1.26416	Train persuasion loss:0.02025	Train Accuracy:0.47538
+	Eval alignment loss:0.07112	Eval persuasion loss:0.02426	Eval Accuracy:0.59375
+Epoch: 19/30 | Time: 1m 9s
+	Train alignment loss:1.29278	Train persuasion loss:0.02034	Train Accuracy:0.45865
+	Eval alignment loss:0.06550	Eval persuasion loss:0.02433	Eval Accuracy:0.59375
+Epoch: 20/30 | Time: 1m 9s
+	Train alignment loss:1.27092	Train persuasion loss:0.02017	Train Accuracy:0.47380
+	Eval alignment loss:0.05959	Eval persuasion loss:0.02434	Eval Accuracy:0.59375
+Epoch: 21/30 | Time: 1m 11s
+	Train alignment loss:1.27892	Train persuasion loss:0.02046	Train Accuracy:0.46054
+	Eval alignment loss:0.05826	Eval persuasion loss:0.02440	Eval Accuracy:0.59375
+Epoch: 22/30 | Time: 1m 5s
+	Train alignment loss:1.27306	Train persuasion loss:0.02018	Train Accuracy:0.46875
+	Eval alignment loss:0.05559	Eval persuasion loss:0.02440	Eval Accuracy:0.59375
+Epoch: 23/30 | Time: 1m 5s
+	Train alignment loss:1.27826	Train persuasion loss:0.02022	Train Accuracy:0.46843
+	Eval alignment loss:0.05467	Eval persuasion loss:0.02436	Eval Accuracy:0.59375
+Epoch: 24/30 | Time: 1m 5s
+	Train alignment loss:1.25607	Train persuasion loss:0.02043	Train Accuracy:0.45549
+	Eval alignment loss:0.05050	Eval persuasion loss:0.02440	Eval Accuracy:0.59375
+Epoch: 25/30 | Time: 1m 4s
+	Train alignment loss:1.27424	Train persuasion loss:0.02066	Train Accuracy:0.45044
+	Eval alignment loss:0.04612	Eval persuasion loss:0.02441	Eval Accuracy:0.59375
+Epoch: 26/30 | Time: 1m 11s
+	Train alignment loss:1.25379	Train persuasion loss:0.02057	Train Accuracy:0.47948
+	Eval alignment loss:0.04479	Eval persuasion loss:0.02439	Eval Accuracy:0.59375
+Epoch: 27/30 | Time: 1m 7s
+	Train alignment loss:1.27116	Train persuasion loss:0.02032	Train Accuracy:0.46370
+	Eval alignment loss:0.04320	Eval persuasion loss:0.02435	Eval Accuracy:0.59375
+Epoch: 28/30 | Time: 1m 5s
+	Train alignment loss:1.27572	Train persuasion loss:0.02056	Train Accuracy:0.46370
+	Eval alignment loss:0.05058	Eval persuasion loss:0.02438	Eval Accuracy:0.59375
+Epoch: 29/30 | Time: 1m 5s
+	Train alignment loss:1.23838	Train persuasion loss:0.02025	Train Accuracy:0.46686
+	Eval alignment loss:0.05486	Eval persuasion loss:0.02440	Eval Accuracy:0.59375
+Epoch: 30/30 | Time: 1m 8s
+	Train alignment loss:1.21892	Train persuasion loss:0.02022	Train Accuracy:0.46622
+	Eval alignment loss:0.04007	Eval persuasion loss:0.02435	Eval Accuracy:0.59375
+FOLD 9
+Let's use 10 GPUs!
+Test alignment loss:0.08879	Test persuasion loss:0.01921	Test Accuracy:0.47059
+MSE: 0.019

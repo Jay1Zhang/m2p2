@@ -34,6 +34,7 @@ if __name__ == '__main__':
     VERBOSE = args.verbose
     #TEST_MODE = True
     #VERBOSE = True
+    print("FOLD", FOLD)
 
     #############
 
@@ -67,11 +68,11 @@ if __name__ == '__main__':
     m2p2_optim = optim.Adam(m2p2_params, lr=LR, weight_decay=W_DECAY)
     m2p2_scheduler = optim.lr_scheduler.StepLR(m2p2_optim, step_size=STEP_SIZE, gamma=SCHE_GAMMA)
 
-    if VERBOSE:
-        print('####### total m2p2 hyper-parameters ', count_hyper_params(m2p2_params))
-        for k, v in m2p2_models.items():
-            print(v)
-            print(count_hyper_params(v.parameters()))
+    #if VERBOSE:
+    #    print('####### total m2p2 hyper-parameters ', count_hyper_params(m2p2_params))
+    #    for k, v in m2p2_models.items():
+    #        print(v)
+    #        print(count_hyper_params(v.parameters()))
 
     # 3 - Initialize concat weights: w_a, w_v, w_l
     weight_mod = {mod: 1. / len(MODS) for mod in MODS}
@@ -85,8 +86,8 @@ if __name__ == '__main__':
             start_time = time.time()
             #### Slave Procedure Start ####
             # train ref model
-            bar_n = tqdm(range(n_EPOCHS), desc='slave procedure')
-            for slave_epoch in bar_n:
+            # bar_n = tqdm(range(n_EPOCHS), desc='slave procedure')
+            for slave_epoch in range(n_EPOCHS):
                 train_loss_ref = train_ref(m2p2_models, ref_model, MODS, tra_loader, ref_optim, ref_scheduler)
 
             # eval ref model and update weight_mod
