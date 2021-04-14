@@ -21,14 +21,14 @@ GAMMA = 0.2     # loss_final = L_pers + GAMMA * L_align
 ALPHA = 0.5     # update rate for modality weights
 BETA = 50       # weight in the softmax function for modality weights
 
-N_EPOCHS = 30   # master training procedure (alg 1 in paper)
+N_EPOCHS = 40   # master training procedure (alg 1 in paper)
 n_EPOCHS = 1   # slave training procedure (alg 1 in paper)
 
 # optimizer
 LR = 1e-3
 W_DECAY = 1e-5      # L2正则系数
 STEP_SIZE = 10
-SCHE_GAMMA = 0.5
+SCHE_GAMMA = 0.2
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -88,13 +88,8 @@ def loadModel(FOLD, model_dict):
 
 
 def calcAccuracy(y_pred, y_true):
-    n = y_true.shape[0]
-    THRESHOLD = 0.10
-    threshold = torch.tensor([THRESHOLD for i in range(n)]).to(device)
-    diff = torch.abs(y_pred.squeeze() - y_true)
-    acc = torch.ge(threshold, diff).sum() / n
-    return acc
-
+    mae = nn.L1Loss()
+    return mae(y_pred[:, 0], y_true)
 
 def calcAlignLoss(s_emb_mod, MODS):
     criterion = nn.CosineEmbeddingLoss(reduction='mean')
