@@ -28,7 +28,7 @@ n_EPOCHS = 10   # slave training procedure (alg 1 in paper)
 LR = 1e-3
 W_DECAY = 1e-5      # L2正则系数
 STEP_SIZE = 10
-SCHE_GAMMA = 0.5
+SCHE_GAMMA = 0.2
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -88,12 +88,15 @@ def loadModel(FOLD, model_dict):
 
 
 def calcAccuracy(y_pred, y_true):
-    n = y_true.shape[0]
-    THRESHOLD = 0.10
-    threshold = torch.tensor([THRESHOLD for i in range(n)]).to(device)
-    diff = torch.abs(y_pred.squeeze() - y_true)
-    acc = torch.ge(threshold, diff).sum() / n
-    return acc
+    #n = y_true.shape[0]
+    #THRESHOLD = 0.10
+    #threshold = torch.tensor([THRESHOLD for i in range(n)]).to(device)
+    #diff = torch.abs(y_pred.squeeze() - y_true)
+    #acc = torch.ge(threshold, diff).sum() / n
+    #return acc
+    mae = nn.L1Loss()
+    return mae(y_pred[:, 0], y_true)
+
 
 
 def calcAlignLoss(s_emb_mod, MODS):
